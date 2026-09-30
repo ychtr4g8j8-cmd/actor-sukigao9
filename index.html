@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>俳優 好き顔9選</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: #fff7fa;
+      color: #444;
+    }
+
+    .screen {
+      display: none;
+      min-height: 100vh;
+      padding: 25px 15px 40px;
+    }
+
+    .screen.active {
+      display: block;
+    }
+
+    .start {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #e88ca8;
+      font-size: 32px;
+      margin: 10px 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #555;
+    }
+
+    .subtitle {
+      color: #888;
+      margin-bottom: 35px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .start-button {
+      background: #f19ab5;
+      color: white;
+      border-radius: 30px;
+      padding: 15px 55px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(230, 130, 160, 0.25);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .count {
+      font-weight: bold;
+      color: #e487a5;
+      font-size: 18px;
+    }
+
+    .search {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1px solid #f0cbd6;
+      border-radius: 25px;
+      outline: none;
+      margin-bottom: 18px;
+      font-size: 16px;
+      background: white;
+    }
+
+    .actor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .actor-card {
+      position: relative;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .actor-card.selected {
+      border-color: #f19ab5;
+    }
+
+    .actor-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+      background: #f5e8ed;
+    }
+
+    .actor-name {
+      padding: 8px 3px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .number {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: #f19ab5;
+      color: white;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .selected .number {
+      display: flex;
+    }
+
+    .result-button {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 30px;
+      background: #f19ab5;
+      color: white;
+      font-weight: bold;
+    }
+
+    .result-button:disabled {
+      background: #ddd;
+      cursor: not-allowed;
+    }
+
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .result-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .result-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .rank {
+      color: #e487a5;
+      font-weight: bold;
+      padding-top: 6px;
+    }
+
+    .result-name {
+      padding: 5px 2px 10px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .again-button {
+      display: block;
+      margin: 25px auto 0;
+      padding: 13px 35px;
+      border-radius: 25px;
+      background: #eee;
+      color: #555;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px 0;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- スタート画面 -->
+  <section id="startScreen" class="screen active start">
+    <div>
+      <div style="font-size:14px; color:#aaa;">MY FAVORITE</div>
+
+      <h1>俳優<br>好き顔9選</h1>
+
+      <p class="subtitle">
+        あなたの好きな顔の俳優を<br>
+        9人選んでね ♡
+      </p>
+
+      <button class="start-button" onclick="startGame()">
+        START
+      </button>
+    </div>
+  </section>
+
+
+  <!-- 選択画面 -->
+  <section id="selectScreen" class="screen">
+
+    <h2>好きな顔を9人選んでね ♡</h2>
+
+    <div class="top-bar">
+      <span>選択した順番がランキングになるよ</span>
+      <span class="count" id="count">0 / 9</span>
+    </div>
+
+    <input
+      type="text"
+      id="search"
+      class="search"
+      placeholder="俳優名を検索 🔍"
+      oninput="searchActors()"
+    >
+
+    <div id="actorGrid" class="actor-grid">
+      <div class="loading">俳優を読み込み中…</div>
+    </div>
+
+    <button
+      id="resultButton"
+      class="result-button"
+      onclick="showResult()"
+      disabled
+    >
+      9人選んで結果を見る
+    </button>
+
+  </section>
+
+
+  <!-- 結果画面 -->
+  <section id="resultScreen" class="screen">
+
+    <h2>あなたの好き顔9選 ♡</h2>
+
+    <div id="resultGrid" class="result-grid"></div>
+
+    <button class="again-button" onclick="again()">
+      もう一度選ぶ
+    </button>
+
+  </section>
+
+
+<script>
+
+let actors = [];
+let selected = [];
+
+
+/* 俳優データを読み込む */
+async function loadActors() {
+
+  try {
+
+    const response = await fetch("actors.json");
+
+    actors = await response.json();
+
+    displayActors(actors);
+
+  } catch (error) {
+
+    document.getElementById("actorGrid").innerHTML =
+      '<div class="loading">俳優データを読み込めませんでした。</div>';
+
+    console.error(error);
+  }
+}
+
+
+/* スタート */
+function startGame() {
+
+  document.getElementById("startScreen").classList.remove("active");
+
+  document.getElementById("selectScreen").classList.add("active");
+
+  loadActors();
+}
+
+
+/* 俳優を表示 */
+function displayActors(list) {
+
+  const grid = document.getElementById("actorGrid");
+
+  grid.innerHTML = "";
+
+  list.forEach((actor) => {
+
+    const card = document.createElement("div");
+
+    card.className = "actor-card";
+
+    card.innerHTML = `
+      <div class="number"></div>
+
+      <img
+        src="${actor.image}"
+        alt="${actor.name}"
+        loading="lazy"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="actor-name">
+        ${actor.name}
+      </div>
+    `;
+
+    card.onclick = () => selectActor(actor, card);
+
+    grid.appendChild(card);
+
+  });
+
+  updateCards();
+
+}
+
+
+/* 俳優を選択 */
+function selectActor(actor, card) {
+
+  const index = selected.findIndex(
+    item => item.name === actor.name
+  );
+
+  /* すでに選択していた場合 */
+  if (index !== -1) {
+
+    selected.splice(index, 1);
+
+  } else {
+
+    /* 9人以上は選べない */
+    if (selected.length >= 9) {
+      return;
+    }
+
+    selected.push(actor);
+
+  }
+
+  updateCards();
+
+}
+
+
+/* カード表示更新 */
+function updateCards() {
+
+  document.querySelectorAll(".actor-card").forEach(card => {
+
+    const name =
+      card.querySelector(".actor-name").textContent.trim();
+
+    const index =
+      selected.findIndex(actor => actor.name === name);
+
+    if (index !== -1) {
+
+      card.classList.add("selected");
+
+      card.querySelector(".number").textContent =
+        index + 1;
+
+    } else {
+
+      card.classList.remove("selected");
+
+      card.querySelector(".number").textContent = "";
+
+    }
+
+  });
+
+
+  document.getElementById("count").textContent =
+    `${selected.length} / 9`;
+
+
+  document.getElementById("resultButton").disabled =
+    selected.length !== 9;
+
+}
+
+
+/* 検索 */
+function searchActors() {
+
+  const keyword =
+    document.getElementById("search").value
+      .toLowerCase()
+      .trim();
+
+  const filtered = actors.filter(actor =>
+    actor.name.toLowerCase().includes(keyword)
+  );
+
+  displayActors(filtered);
+
+}
+
+
+/* 結果 */
+function showResult() {
+
+  document.getElementById("selectScreen")
+    .classList.remove("active");
+
+  document.getElementById("resultScreen")
+    .classList.add("active");
+
+
+  const grid =
+    document.getElementById("resultGrid");
+
+  grid.innerHTML = "";
+
+
+  selected.forEach((actor, index) => {
+
+    const card = document.createElement("div");
+
+    card.className = "result-card";
+
+    card.innerHTML = `
+      <img src="${actor.image}" alt="${actor.name}">
+      <div class="rank">NO.${index + 1}</div>
+      <div class="result-name">${actor.name}</div>
+    `;
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* もう一度 */
+function again() {
+
+  selected = [];
+
+  document.getElementById("resultScreen")
+    .classList.remove("active");
+
+  document.getElementById("selectScreen")
+    .classList.add("active");
+
+  document.getElementById("search").value = "";
+
+  displayActors(actors);
+
+}
+
+</script>
+
+</body>
+</html>

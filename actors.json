@@ -100,7 +100,7 @@
     "image": "https://placehold.co/500x500?text=Fuju+Kamio"
   },
   {
-    "id": "koji_mizukami",
+    "id": "koshi_mizukami",
     "name": "水上恒司",
     "image": "https://placehold.co/500x500?text=Koji+Mizukami"
   },
@@ -170,7 +170,7 @@
     "image": "https://placehold.co/500x500?text=Sho+Nishigaki"
   },
   {
-    "id": "yoshi_iwase",
+    "id": "yoji_iwase",
     "name": "岩瀬洋志",
     "image": "https://placehold.co/500x500?text=Yoshi+Iwase"
   },
@@ -450,8 +450,8 @@
     "image": "https://placehold.co/500x500?text=Aimu+Mizuishi"
   },
   {
-    "id": "sora_ichinose",
-    "name": "一ノ瀬颯",
+    "id": "sora_inoue",
+    "name": "井上想良",
     "image": "https://placehold.co/500x500?text=Sora+Ichinose"
   },
   {
@@ -465,7 +465,7 @@
     "image": "https://placehold.co/500x500?text=Souma+Sato"
   },
   {
-    "id": "tatsuya_hujiwara",
+    "id": "tatsuya_fujiwara",
     "name": "藤原竜也",
     "image": "https://placehold.co/500x500?text=Yuto+Kamimura"
   },

@@ -44,17 +44,11 @@ button {
 ========================= */
 
 #startScreen {
-
   min-height: 100vh;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   text-align: center;
-
   padding: 20px;
 }
 
@@ -64,48 +58,31 @@ button {
 }
 
 .logoText {
-
   font-size: 13px;
-
   letter-spacing: 5px;
-
   color: #999;
-
   margin-bottom: 15px;
 }
 
 h1 {
-
   margin: 0;
-
   font-size: 32px;
-
   letter-spacing: 2px;
 }
 
 .startDescription {
-
   margin: 20px 0 30px;
-
   line-height: 1.8;
-
   color: #666;
 }
 
 .startButton {
-
   border: none;
-
   background: #333;
-
   color: white;
-
   padding: 16px 60px;
-
   border-radius: 999px;
-
   font-size: 16px;
-
   cursor: pointer;
 }
 
@@ -115,45 +92,31 @@ h1 {
 ========================= */
 
 #gameScreen {
-
   max-width: 700px;
-
   margin: auto;
-
   padding: 20px 14px 40px;
 }
 
 .topArea {
-
   text-align: center;
-
   margin-bottom: 20px;
 }
 
 .phase {
-
   font-size: 12px;
-
   color: #999;
-
   letter-spacing: 2px;
 }
 
 .questionTitle {
-
   font-size: 22px;
-
   font-weight: bold;
-
   margin-top: 8px;
 }
 
 .progress {
-
   font-size: 13px;
-
   color: #999;
-
   margin-top: 7px;
 }
 
@@ -163,24 +126,16 @@ h1 {
 ========================= */
 
 .searchBox {
-
   margin: 15px 0;
 }
 
 .searchBox input {
-
   width: 100%;
-
   border: 1px solid #ddd;
-
   border-radius: 999px;
-
   padding: 12px 17px;
-
   font-size: 14px;
-
   outline: none;
-
   background: white;
 }
 
@@ -190,90 +145,54 @@ h1 {
 ========================= */
 
 .actorGrid {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(2, 1fr);
-
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
 }
 
 .actorCard {
-
   position: relative;
-
   background: white;
-
   border: 3px solid transparent;
-
   border-radius: 16px;
-
   overflow: hidden;
-
-  box-shadow:
-    0 3px 12px rgba(0,0,0,0.07);
-
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
   cursor: pointer;
-
   transition: 0.15s;
 }
 
 .actorCard.selected {
-
   border-color: #ff6f91;
-
   transform: translateY(-2px);
 }
 
 .actorCard.selected::after {
-
   content: "✓";
-
   position: absolute;
-
   top: 8px;
-
   right: 8px;
-
   width: 30px;
-
   height: 30px;
-
   border-radius: 50%;
-
   background: #ff6f91;
-
   color: white;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   font-weight: bold;
 }
 
 .actorImage {
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
-
   display: block;
 }
 
 .actorName {
-
   text-align: center;
-
   font-size: 14px;
-
   font-weight: bold;
-
   padding: 10px 5px;
 }
 
@@ -283,50 +202,32 @@ h1 {
 ========================= */
 
 .nextArea {
-
   margin-top: 22px;
-
   text-align: center;
 }
 
 .nextButton {
-
   width: 100%;
-
   max-width: 360px;
-
   border: none;
-
   border-radius: 999px;
-
   padding: 15px;
-
   background: #ff6f91;
-
   color: white;
-
   font-size: 16px;
-
   font-weight: bold;
-
   cursor: pointer;
 }
 
 .nextButton:disabled {
-
   background: #ddd;
-
   color: #999;
-
   cursor: not-allowed;
 }
 
 .nextNotice {
-
   margin-top: 9px;
-
   font-size: 12px;
-
   color: #999;
 }
 
@@ -336,104 +237,67 @@ h1 {
 ========================= */
 
 #resultScreen {
-
   max-width: 700px;
-
   margin: auto;
-
   padding: 30px 14px 50px;
 }
 
 .resultHeader {
-
   text-align: center;
-
   margin-bottom: 25px;
 }
 
 .resultHeader h2 {
-
   margin: 0;
-
   font-size: 28px;
 }
 
 .resultHeader p {
-
   color: #999;
 }
 
 .resultGrid {
-
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
 .resultCard {
-
   background: white;
-
   border-radius: 12px;
-
   overflow: hidden;
-
-  box-shadow:
-    0 3px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 .resultCard img {
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   object-fit: cover;
-
   display: block;
 }
 
 .resultRank {
-
   text-align: center;
-
   font-size: 11px;
-
   color: #999;
-
   padding-top: 7px;
 }
 
 .resultName {
-
   text-align: center;
-
   font-weight: bold;
-
   font-size: 12px;
-
   padding: 8px 3px;
 }
 
 .restartButton {
-
   display: block;
-
   margin: 28px auto 0;
-
   border: none;
-
   background: #333;
-
   color: white;
-
   padding: 14px 35px;
-
   border-radius: 999px;
-
   cursor: pointer;
 }
 
@@ -459,6 +323,7 @@ h1 {
   .actorName {
     font-size: 13px;
   }
+
 }
 
 </style>
@@ -469,9 +334,9 @@ h1 {
 <body>
 
 
-<!-- =================================================
+<!-- =========================
      START
-================================================= -->
+========================= -->
 
 <section id="startScreen">
 
@@ -507,10 +372,9 @@ h1 {
 </section>
 
 
-
-<!-- =================================================
+<!-- =========================
      GAME
-================================================= -->
+========================= -->
 
 <section
   id="gameScreen"
@@ -543,8 +407,6 @@ h1 {
   </div>
 
 
-  <!-- 検索 -->
-
   <div class="searchBox">
 
     <input
@@ -556,8 +418,6 @@ h1 {
 
   </div>
 
-
-  <!-- 俳優 -->
 
   <div
     id="actorGrid"
@@ -585,10 +445,9 @@ h1 {
 </section>
 
 
-
-<!-- =================================================
+<!-- =========================
      RESULT
-================================================= -->
+========================= -->
 
 <section
   id="resultScreen"
@@ -607,12 +466,10 @@ h1 {
 
   </div>
 
-
   <div
     id="resultGrid"
     class="resultGrid"
   ></div>
-
 
   <button
     class="restartButton"
@@ -624,59 +481,78 @@ h1 {
 </section>
 
 
-
 <script>
 
 /* =================================================
-   データ
+   基本データ
 ================================================= */
 
 let actors = [];
 
 
-/*
-  選択回数
+/* 予選で選ばれた回数 */
 
-  例：
-
-  山﨑賢人 → 5
-  吉沢亮 → 3
-*/
-
-let selectionCounts = {};
+let preliminaryCounts = {};
 
 
-/*
-  現在の候補
-*/
+/* 本戦で選ばれた回数 */
+
+let mainCounts = {};
+
+
+/* 決勝で勝った回数 */
+
+let finalWins = {};
+
+
+/* 今表示している俳優 */
 
 let currentChoices = [];
 
 
-/*
-  今の画面で選んだ人
-*/
+/* 今選んでいる俳優 */
 
 let currentSelected = [];
 
 
-/*
-  現在のラウンド
-*/
+/* 今のフェーズ */
 
-let roundNumber = 0;
+let phase = "preliminary";
 
 
-/*
-  予選の画面数
+/* 予選で一度でも表示された俳優 */
 
-  テスト用。
+let preliminarySeen = new Set();
 
-  本番では俳優数に合わせて
-  自動調整する。
-*/
 
-const PRELIMINARY_ROUNDS = 8;
+/* 本戦候補 */
+
+let mainCandidates = [];
+
+
+/* 本戦の表示回数 */
+
+let mainRound = 0;
+
+
+/* 決勝候補 */
+
+let finalCandidates = [];
+
+
+/* 決勝の比較 */
+
+let finalPairs = [];
+
+
+/* 決勝で現在比較しているペア */
+
+let currentPairIndex = 0;
+
+
+/* 決勝の順位用スコア */
+
+let finalScores = {};
 
 
 /* =================================================
@@ -706,9 +582,11 @@ function shuffle(array) {
       result[j],
       result[i]
     ];
+
   }
 
   return result;
+
 }
 
 
@@ -721,19 +599,39 @@ async function loadActors() {
   const response =
     await fetch("actors.json");
 
+  if (!response.ok) {
+
+    throw new Error(
+      "actors.jsonが読み込めません"
+    );
+
+  }
+
   actors =
     await response.json();
 
 
-  /*
-    全員の選択回数を0にする
-  */
+  if (!Array.isArray(actors)) {
+
+    throw new Error(
+      "actors.jsonの形式が正しくありません"
+    );
+
+  }
+
+
+  preliminaryCounts = {};
+  mainCounts = {};
+  finalWins = {};
+  finalScores = {};
+
 
   actors.forEach(actor => {
 
-    selectionCounts[
-      actor.id
-    ] = 0;
+    preliminaryCounts[actor.id] = 0;
+    mainCounts[actor.id] = 0;
+    finalWins[actor.id] = 0;
+    finalScores[actor.id] = 0;
 
   });
 
@@ -759,6 +657,7 @@ async function startGame() {
     console.error(error);
 
     return;
+
   }
 
 
@@ -769,6 +668,7 @@ async function startGame() {
     );
 
     return;
+
   }
 
 
@@ -776,65 +676,425 @@ async function startGame() {
     .getElementById("startScreen")
     .classList.add("hidden");
 
-
   document
     .getElementById("gameScreen")
     .classList.remove("hidden");
 
 
-  roundNumber = 0;
+  phase = "preliminary";
 
-  showNextRound();
+  preliminarySeen = new Set();
+
+  currentSelected = [];
+
+  showPreliminaryRound();
 
 }
 
 
 /* =================================================
-   次の予選
+   予選
 ================================================= */
 
-function showNextRound() {
-
-  roundNumber++;
+function showPreliminaryRound() {
 
   currentSelected = [];
 
 
   /*
-    毎回シャッフルする。
+    まだ一度も出ていない俳優を優先する。
 
-    つまり actors.json の順番は
-    表示順にならない。
+    その中から最大4人。
   */
 
-  const shuffled =
-    shuffle(actors);
+  const unseen =
+    shuffle(
+      actors.filter(
+        actor =>
+          !preliminarySeen.has(actor.id)
+      )
+    );
 
 
-  /*
-    4人表示。
-
-    ただし3人しか残っていない場合は3人。
-  */
-
-  currentChoices =
-    shuffled.slice(
+  let choices =
+    unseen.slice(
       0,
       Math.min(4, actors.length)
     );
 
 
+  /*
+    未登場の俳優が4人未満なら、
+    すでに登場した俳優も混ぜる。
+
+    これによって同じ人が
+    もう一度出ることがある。
+  */
+
+  if (choices.length < 4) {
+
+    const remaining =
+      shuffle(
+        actors.filter(
+          actor =>
+            !choices.some(
+              c => c.id === actor.id
+            )
+        )
+      );
+
+
+    choices =
+      choices.concat(
+        remaining.slice(
+          0,
+          4 - choices.length
+        )
+      );
+
+  }
+
+
+  currentChoices = choices;
+
+
+  /*
+    表示された人を記録
+  */
+
+  currentChoices.forEach(
+    actor => {
+      preliminarySeen.add(actor.id);
+    }
+  );
+
+
   document
     .getElementById("phaseText")
     .textContent =
-    "予選  " +
-    roundNumber;
+    "予選";
 
 
   document
     .getElementById("questionTitle")
     .textContent =
     "この中で好きな顔を選んでね♡";
+
+
+  document
+    .getElementById("progressText")
+    .textContent =
+    preliminarySeen.size +
+    " / " +
+    actors.length +
+    "人 登場済み";
+
+
+  document
+    .getElementById("searchInput")
+    .value = "";
+
+
+  renderActors();
+
+  updateSelectionDisplay();
+
+}
+
+
+/* =================================================
+   本戦へ進むか確認
+================================================= */
+
+function checkPreliminaryFinished() {
+
+  return (
+    preliminarySeen.size >= actors.length
+  );
+
+}
+
+
+/* =================================================
+   本戦開始
+================================================= */
+
+function startMainRound() {
+
+  phase = "main";
+
+  currentSelected = [];
+
+
+  /*
+    予選の選択回数順に並べる。
+
+    同点ならランダム。
+  */
+
+  const ranking =
+    [...actors].sort(
+      (a, b) => {
+
+        const diff =
+          preliminaryCounts[b.id] -
+          preliminaryCounts[a.id];
+
+        if (diff !== 0) {
+
+          return diff;
+
+        }
+
+        return Math.random() - 0.5;
+
+      }
+    );
+
+
+  /*
+    本戦は最大12人。
+
+    16人なら12人。
+
+    500人なら12人。
+  */
+
+  mainCandidates =
+    ranking.slice(
+      0,
+      Math.min(12, ranking.length)
+    );
+
+
+  mainRound = 0;
+
+
+  /*
+    本戦候補の選択回数をリセット
+  */
+
+  mainCandidates.forEach(
+    actor => {
+      mainCounts[actor.id] = 0;
+    }
+  );
+
+
+  showMainRound();
+
+}
+
+
+/* =================================================
+   本戦
+================================================= */
+
+function showMainRound() {
+
+  currentSelected = [];
+
+
+  /*
+    本戦候補から4人をランダム表示。
+
+    何回か繰り返す。
+  */
+
+  const shuffled =
+    shuffle(mainCandidates);
+
+
+  currentChoices =
+    shuffled.slice(
+      0,
+      Math.min(4, mainCandidates.length)
+    );
+
+
+  mainRound++;
+
+
+  document
+    .getElementById("phaseText")
+    .textContent =
+    "本戦";
+
+
+  document
+    .getElementById("questionTitle")
+    .textContent =
+    "この中から好きな顔を選んでね♡";
+
+
+  document
+    .getElementById("progressText")
+    .textContent =
+    "本戦 " +
+    mainRound +
+    "回目";
+
+
+  document
+    .getElementById("searchInput")
+    .value = "";
+
+
+  renderActors();
+
+  updateSelectionDisplay();
+
+}
+
+
+/* =================================================
+   決勝開始
+================================================= */
+
+function startFinal() {
+
+  phase = "final";
+
+
+  /*
+    本戦の結果で並べる。
+
+    上位9人を決勝候補にする。
+  */
+
+  const ranking =
+    [...mainCandidates].sort(
+      (a, b) => {
+
+        const diff =
+          mainCounts[b.id] -
+          mainCounts[a.id];
+
+        if (diff !== 0) {
+
+          return diff;
+
+        }
+
+        return Math.random() - 0.5;
+
+      }
+    );
+
+
+  finalCandidates =
+    ranking.slice(
+      0,
+      Math.min(9, ranking.length)
+    );
+
+
+  /*
+    決勝用スコアを0にする
+  */
+
+  finalCandidates.forEach(
+    actor => {
+
+      finalScores[actor.id] = 0;
+      finalWins[actor.id] = 0;
+
+    }
+  );
+
+
+  /*
+    9人ならランダムに
+    2人ずつ比較する。
+
+    各人が複数回比較される。
+  */
+
+  finalPairs = [];
+
+
+  const shuffled =
+    shuffle(finalCandidates);
+
+
+  for (
+    let i = 0;
+    i < shuffled.length;
+    i++
+  ) {
+
+    for (
+      let j = i + 1;
+      j < shuffled.length;
+      j++
+    ) {
+
+      finalPairs.push([
+        shuffled[i],
+        shuffled[j]
+      ]);
+
+    }
+
+  }
+
+
+  finalPairs =
+    shuffle(finalPairs);
+
+
+  currentPairIndex = 0;
+
+
+  showFinalPair();
+
+}
+
+
+/* =================================================
+   決勝 2択
+================================================= */
+
+function showFinalPair() {
+
+  if (
+    currentPairIndex >=
+    finalPairs.length
+  ) {
+
+    finishFinal();
+
+    return;
+
+  }
+
+
+  currentSelected = [];
+
+
+  const pair =
+    finalPairs[currentPairIndex];
+
+
+  currentChoices = pair;
+
+
+  document
+    .getElementById("phaseText")
+    .textContent =
+    "決勝";
+
+
+  document
+    .getElementById("questionTitle")
+    .textContent =
+    "どっちの顔が好き？♡";
+
+
+  document
+    .getElementById("progressText")
+    .textContent =
+    "2人から1人選んでね";
 
 
   document
@@ -853,10 +1113,13 @@ function showNextRound() {
    俳優表示
 ================================================= */
 
-function renderActors(list = currentChoices) {
+function renderActors(
+  list = currentChoices
+) {
 
   const grid =
     document.getElementById("actorGrid");
+
 
   grid.innerHTML = "";
 
@@ -928,16 +1191,40 @@ function toggleActor(
   card
 ) {
 
+  /*
+    決勝は必ず1人だけ。
+
+    予選・本戦は複数選択OK。
+  */
+
+  if (phase === "final") {
+
+    currentSelected = [actor];
+
+
+    document
+      .querySelectorAll(".actorCard")
+      .forEach(
+        c => c.classList.remove("selected")
+      );
+
+
+    card.classList.add("selected");
+
+
+    updateSelectionDisplay();
+
+    return;
+
+  }
+
+
   const index =
     currentSelected.findIndex(
       selected =>
         selected.id === actor.id
     );
 
-
-  /*
-    選択済みなら解除
-  */
 
   if (index !== -1) {
 
@@ -951,11 +1238,6 @@ function toggleActor(
     );
 
   }
-
-
-  /*
-    未選択なら追加
-  */
 
   else {
 
@@ -974,7 +1256,7 @@ function toggleActor(
 
 
 /* =================================================
-   選択人数
+   選択表示
 ================================================= */
 
 function updateSelectionDisplay() {
@@ -983,15 +1265,18 @@ function updateSelectionDisplay() {
     currentSelected.length;
 
 
-  document
-    .getElementById("progressText")
-    .textContent =
-    count + "人選択中";
+  if (phase === "preliminary") {
 
+    document
+      .getElementById("progressText")
+      .textContent =
+      preliminarySeen.size +
+      " / " +
+      actors.length +
+      "人 登場済み";
 
-  /*
-    0人なら次へ不可
-  */
+  }
+
 
   document
     .getElementById("nextButton")
@@ -1007,10 +1292,6 @@ function updateSelectionDisplay() {
 
 function nextStep() {
 
-  /*
-    0人なら進めない
-  */
-
   if (
     currentSelected.length === 0
   ) {
@@ -1020,44 +1301,129 @@ function nextStep() {
     );
 
     return;
+
   }
 
 
-  /*
-    選んだ人の回数を増やす
-  */
+  /* =========================
+     予選
+  ========================= */
 
-  currentSelected.forEach(
-    actor => {
+  if (phase === "preliminary") {
 
-      selectionCounts[
-        actor.id
-      ]++;
+    currentSelected.forEach(
+      actor => {
+
+        preliminaryCounts[
+          actor.id
+        ]++;
+
+      }
+    );
+
+
+    /*
+      全員が一度以上登場したら
+      本戦へ。
+    */
+
+    if (
+      checkPreliminaryFinished()
+    ) {
+
+      startMainRound();
+
+      return;
 
     }
-  );
 
 
-  /*
-    予選終了
-  */
-
-  if (
-    roundNumber >=
-    PRELIMINARY_ROUNDS
-  ) {
-
-    finishPreliminary();
+    showPreliminaryRound();
 
     return;
+
   }
 
 
-  /*
-    次のランダム候補
-  */
+  /* =========================
+     本戦
+  ========================= */
 
-  showNextRound();
+  if (phase === "main") {
+
+    currentSelected.forEach(
+      actor => {
+
+        mainCounts[
+          actor.id
+        ]++;
+
+      }
+    );
+
+
+    /*
+      本戦を一定回数行う。
+
+      12人なら6回。
+
+      俳優数が変わっても
+      ある程度自動調整。
+    */
+
+    const mainLimit =
+      Math.max(
+        6,
+        Math.ceil(
+          mainCandidates.length * 0.5
+        )
+      );
+
+
+    if (
+      mainRound >= mainLimit
+    ) {
+
+      startFinal();
+
+      return;
+
+    }
+
+
+    showMainRound();
+
+    return;
+
+  }
+
+
+  /* =========================
+     決勝
+  ========================= */
+
+  if (phase === "final") {
+
+    const winner =
+      currentSelected[0];
+
+
+    finalScores[
+      winner.id
+    ]++;
+
+
+    finalWins[
+      winner.id
+    ]++;
+
+
+    currentPairIndex++;
+
+
+    showFinalPair();
+
+  }
 
 }
 
@@ -1077,7 +1443,7 @@ function searchActors() {
 
 
   /*
-    空欄なら現在の4人に戻す
+    空欄なら現在の候補へ
   */
 
   if (keyword === "") {
@@ -1085,14 +1451,16 @@ function searchActors() {
     renderActors();
 
     return;
+
   }
 
 
   /*
-    名前から検索
+    全俳優から検索。
 
-    ※検索しても選考対象そのものを
-    変更するわけではない。
+    検索結果を表示するだけ。
+
+    ここから選択することもできる。
   */
 
   const results =
@@ -1110,30 +1478,44 @@ function searchActors() {
 
 
 /* =================================================
-   予選終了
+   最終結果
 ================================================= */
 
-function finishPreliminary() {
+function finishFinal() {
 
   /*
-    選択回数順に並べる
+    決勝の勝利数で順位を決定。
 
-    同点の場合はランダム
+    同点の場合は本戦結果を参考にする。
   */
 
   const ranking =
-    [...actors].sort(
+    [...finalCandidates].sort(
       (a, b) => {
 
-        const diff =
-          selectionCounts[b.id] -
-          selectionCounts[a.id];
+        const finalDiff =
+          finalScores[b.id] -
+          finalScores[a.id];
 
-        if (diff !== 0) {
 
-          return diff;
+        if (finalDiff !== 0) {
+
+          return finalDiff;
 
         }
+
+
+        const mainDiff =
+          mainCounts[b.id] -
+          mainCounts[a.id];
+
+
+        if (mainDiff !== 0) {
+
+          return mainDiff;
+
+        }
+
 
         return Math.random() - 0.5;
 
@@ -1141,181 +1523,21 @@ function finishPreliminary() {
     );
 
 
-  /*
-    ここではテスト用に
-    上位12人を次の段階へ。
-  */
-
-  const candidates =
+  showResult(
     ranking.slice(
       0,
-      Math.min(12, ranking.length)
-    );
-
-
-  /*
-    次の段階へ
-
-    本格版ではここから
-
-    4人
-    ↓
-    3人
-    ↓
-    2人
-    ↓
-    決勝
-    ↓
-    TOP9
-
-    にしていく。
-  */
-
-  startSecondRound(
-    candidates
+      Math.min(9, ranking.length)
+    )
   );
 
 }
 
 
 /* =================================================
-   第2段階
+   結果表示
 ================================================= */
 
-let secondRoundActors = [];
-
-let secondRoundIndex = 0;
-
-let secondRoundSelected = [];
-
-
-function startSecondRound(
-  candidates
-) {
-
-  secondRoundActors =
-    candidates;
-
-  secondRoundIndex = 0;
-
-  secondRoundSelected = [];
-
-
-  document
-    .getElementById("phaseText")
-    .textContent =
-    "STEP 2";
-
-
-  showSecondRoundGroup();
-
-}
-
-
-/* =================================================
-   STEP2
-================================================= */
-
-function showSecondRoundGroup() {
-
-  /*
-    12人から3人ずつ出す
-  */
-
-  const group =
-    secondRoundActors.slice(
-      secondRoundIndex,
-      secondRoundIndex + 3
-    );
-
-
-  /*
-    全部終わったら結果へ
-
-    ※ここは後で本格的な
-    2人比較に変更する。
-  */
-
-  if (group.length === 0) {
-
-    finishGame();
-
-    return;
-  }
-
-
-  currentChoices =
-    group;
-
-  currentSelected = [];
-
-
-  document
-    .getElementById("questionTitle")
-    .textContent =
-    "この中から好きな顔を選んでね♡";
-
-
-  renderActors();
-
-  updateSelectionDisplay();
-
-
-  /*
-    次の3人へ
-  */
-
-  secondRoundIndex += 3;
-
-}
-
-
-/* =================================================
-   STEP2 → 次
-================================================= */
-
-function finishGame() {
-
-  /*
-    最終的にはここを
-    本格的な2択決勝にする。
-
-    現在はテストとして
-    選択回数順にTOP9を作る。
-  */
-
-  const ranking =
-    [...actors].sort(
-      (a, b) => {
-
-        return (
-          selectionCounts[b.id] -
-          selectionCounts[a.id]
-        );
-
-      }
-    );
-
-
-  const result =
-    ranking.slice(
-      0,
-      Math.min(9, ranking.length)
-    );
-
-
-  showResult(result);
-
-}
-
-
-/* =================================================
-   結果
-================================================= */
-
-function showResult(
-  result
-) {
+function showResult(result) {
 
   document
     .getElementById("gameScreen")

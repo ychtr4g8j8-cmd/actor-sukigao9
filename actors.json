@@ -1,14 +1,82 @@
 [
   {
+    "id": "kento_yamazaki",
     "name": "山﨑賢人",
     "image": "https://placehold.co/500x500?text=Yamazaki+Kento"
   },
   {
+    "id": "ryo_yoshizawa",
     "name": "吉沢亮",
     "image": "https://placehold.co/500x500?text=Yoshizawa+Ryo"
   },
   {
+    "id": "ryusei_yokohama",
     "name": "横浜流星",
     "image": "https://placehold.co/500x500?text=Yokohama+Ryusei"
+  },
+  {
+    "id": "ren_meguro",
+    "name": "高杉真宙",
+    "image": "https://placehold.co/500x500?text=Meguro+Ren"
+  },
+  {
+    "id": "takeru_satoh",
+    "name": "佐藤健",
+    "image": "https://placehold.co/500x500?text=Satoh+Takeru"
+  },
+  {
+    "id": "fumiya_takahashi",
+    "name": "高橋文哉",
+    "image": "https://placehold.co/500x500?text=Takahashi+Fumiya"
+  },
+  {
+    "id": "ryubi_miyase",
+    "name": "宮世琉弥",
+    "image": "https://placehold.co/500x500?text=Miyase+Ryubi"
+  },
+  {
+    "id": "hokuto_matsumura",
+    "name": "高良健吾",
+    "image": "https://placehold.co/500x500?text=Matsumura+Hokuto"
+  },
+  {
+    "id": "masaki_suda",
+    "name": "菅田将暉",
+    "image": "https://placehold.co/500x500?text=Suda+Masaki"
+  },
+  {
+    "id": "sota_fukushi",
+    "name": "福士蒼汰",
+    "image": "https://placehold.co/500x500?text=Fukushi+Sota"
+  },
+  {
+    "id": "taishi_nakagawa",
+    "name": "中川大志",
+    "image": "https://placehold.co/500x500?text=Nakagawa+Taishi"
+  },
+  {
+    "id": "yuki_yamada",
+    "name": "山田裕貴",
+    "image": "https://placehold.co/500x500?text=Yamada+Yuki"
+  },
+  {
+    "id": "sota_ryosuke",
+    "name": "高橋一生",
+    "image": "https://placehold.co/500x500?text=Sano+Hayato"
+  },
+  {
+    "id": "eito_kawahara",
+    "name": "斎藤工",
+    "image": "https://placehold.co/500x500?text=Kawanishi+Takumi"
+  },
+  {
+    "id": "shunsuke_michieda",
+    "name": "玉木宏",
+    "image": "https://placehold.co/500x500?text=Michieda+Shunsuke"
+  },
+  {
+    "id": "sho_hirano",
+    "name": "樋口幸平",
+    "image": "https://placehold.co/500x500?text=Hirano+Sho"
   }
 ]

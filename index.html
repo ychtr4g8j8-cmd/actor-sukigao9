@@ -1,332 +1,404 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ja">
 
 <head>
 
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-<title>俳優 好き顔9選</title>
-
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: #fff7fa;
-  color: #333;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-}
-
-button {
-  font-family: inherit;
-}
-
-.hidden {
-  display: none !important;
-}
+  <title>俳優 好き顔9選</title>
 
 
-/* =========================
-   START
-========================= */
+  <style>
 
-#startScreen {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-.startBox {
-  width: 100%;
-  max-width: 500px;
-}
-
-.logoText {
-  font-size: 13px;
-  letter-spacing: 5px;
-  color: #999;
-  margin-bottom: 15px;
-}
-
-h1 {
-  margin: 0;
-  font-size: 32px;
-  letter-spacing: 2px;
-}
-
-.startDescription {
-  margin: 20px 0 30px;
-  line-height: 1.8;
-  color: #666;
-}
-
-.startButton {
-  border: none;
-  background: #333;
-  color: white;
-  padding: 16px 60px;
-  border-radius: 999px;
-  font-size: 16px;
-  cursor: pointer;
-}
+    * {
+      box-sizing: border-box;
+    }
 
 
-/* =========================
-   GAME
-========================= */
+    body {
+      margin: 0;
+      background: #fff7fa;
+      color: #333;
 
-#gameScreen {
-  max-width: 700px;
-  margin: auto;
-  padding: 20px 14px 40px;
-}
-
-.topArea {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.phase {
-  font-size: 12px;
-  color: #999;
-  letter-spacing: 2px;
-}
-
-.questionTitle {
-  font-size: 22px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.progress {
-  font-size: 13px;
-  color: #999;
-  margin-top: 7px;
-}
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+    }
 
 
-/* =========================
-   SEARCH
-========================= */
-
-.searchBox {
-  margin: 15px 0;
-}
-
-.searchBox input {
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 999px;
-  padding: 12px 17px;
-  font-size: 14px;
-  outline: none;
-  background: white;
-}
+    .container {
+      width: min(100% - 20px, 900px);
+      margin: 0 auto;
+      padding: 25px 0 50px;
+    }
 
 
-/* =========================
-   ACTORS
-========================= */
-
-.actorGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.actorCard {
-  position: relative;
-  background: white;
-  border: 3px solid transparent;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-  cursor: pointer;
-  transition: 0.15s;
-}
-
-.actorCard.selected {
-  border-color: #ff6f91;
-  transform: translateY(-2px);
-}
-
-.actorCard.selected::after {
-  content: "✓";
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #ff6f91;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-.actorImage {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.actorName {
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 10px 5px;
-}
+    h1 {
+      text-align: center;
+      font-size: 27px;
+      margin: 5px 0 7px;
+    }
 
 
-/* =========================
-   NEXT
-========================= */
-
-.nextArea {
-  margin-top: 22px;
-  text-align: center;
-}
-
-.nextButton {
-  width: 100%;
-  max-width: 360px;
-  border: none;
-  border-radius: 999px;
-  padding: 15px;
-  background: #ff6f91;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.nextButton:disabled {
-  background: #ddd;
-  color: #999;
-  cursor: not-allowed;
-}
-
-.nextNotice {
-  margin-top: 9px;
-  font-size: 12px;
-  color: #999;
-}
+    .subtitle {
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
 
 
-/* =========================
-   RESULT
-========================= */
-
-#resultScreen {
-  max-width: 700px;
-  margin: auto;
-  padding: 30px 14px 50px;
-}
-
-.resultHeader {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.resultHeader h2 {
-  margin: 0;
-  font-size: 28px;
-}
-
-.resultHeader p {
-  color: #999;
-}
-
-.resultGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.resultCard {
-  background: white;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.resultCard img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-}
-
-.resultRank {
-  text-align: center;
-  font-size: 11px;
-  color: #999;
-  padding-top: 7px;
-}
-
-.resultName {
-  text-align: center;
-  font-weight: bold;
-  font-size: 12px;
-  padding: 8px 3px;
-}
-
-.restartButton {
-  display: block;
-  margin: 28px auto 0;
-  border: none;
-  background: #333;
-  color: white;
-  padding: 14px 35px;
-  border-radius: 999px;
-  cursor: pointer;
-}
+    .phase {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
 
 
-/* =========================
-   MOBILE
-========================= */
+    .description {
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
 
-@media (max-width: 480px) {
 
-  h1 {
-    font-size: 27px;
-  }
+    .progress {
+      text-align: center;
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
 
-  .questionTitle {
-    font-size: 20px;
-  }
 
-  .actorGrid {
-    gap: 9px;
-  }
+    /* =========================
+       俳優カード
+    ========================= */
 
-  .actorName {
-    font-size: 13px;
-  }
+    .actor-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
 
-}
 
-</style>
+    .actor-card {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 14px;
+      padding: 6px;
+
+      cursor: pointer;
+      user-select: none;
+
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.06);
+
+      transition: 0.15s;
+    }
+
+
+    .actor-card:hover {
+      transform: translateY(-2px);
+    }
+
+
+    .actor-card.selected {
+      border-color: #ff79a5;
+      background: #fff0f5;
+    }
+
+
+    .actor-card img {
+      display: block;
+
+      width: 100%;
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      border-radius: 10px;
+
+      background: #eee;
+    }
+
+
+    .actor-name {
+      text-align: center;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      line-height: 1.3;
+
+      margin-top: 7px;
+    }
+
+
+    /* =========================
+       ボタン
+    ========================= */
+
+    button {
+      display: block;
+
+      margin: 25px auto 0;
+
+      padding: 13px 30px;
+
+      border: none;
+      border-radius: 999px;
+
+      background: #ff79a5;
+      color: white;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      cursor: pointer;
+    }
+
+
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+
+    .restart-button {
+      background: #999;
+    }
+
+
+    /* =========================
+       検索
+    ========================= */
+
+    .search-box {
+      margin-top: 35px;
+
+      padding: 15px;
+
+      background: white;
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .search-box h2 {
+      margin: 0 0 10px;
+
+      font-size: 16px;
+    }
+
+
+    .search-box input {
+      width: 100%;
+
+      padding: 12px;
+
+      border: 1px solid #ddd;
+
+      border-radius: 10px;
+
+      font-size: 16px;
+
+      outline: none;
+    }
+
+
+    .search-box input:focus {
+      border-color: #ff79a5;
+    }
+
+
+    .search-results {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 8px;
+
+      margin-top: 12px;
+    }
+
+
+    .search-result {
+      padding: 10px;
+
+      background: #f7f7f7;
+
+      border-radius: 9px;
+
+      text-align: center;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       結果画面
+    ========================= */
+
+    .hidden {
+      display: none;
+    }
+
+
+    .result-title {
+      text-align: center;
+
+      font-size: 28px;
+      font-weight: bold;
+
+      margin-bottom: 22px;
+    }
+
+
+    .rank-item {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+
+      background: white;
+
+      border-radius: 13px;
+
+      padding: 10px;
+
+      margin-bottom: 10px;
+
+      box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .rank-number {
+      width: 38px;
+      min-width: 38px;
+
+      text-align: center;
+
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+
+    .rank-item img {
+      width: 62px;
+      height: 62px;
+
+      object-fit: cover;
+
+      border-radius: 9px;
+
+      background: #eee;
+    }
+
+
+    .rank-name {
+      flex: 1;
+
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+
+    /* =========================
+       決勝
+    ========================= */
+
+    .final-choice {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+
+    .final-choice .actor-card {
+      padding: 10px;
+    }
+
+
+    .final-choice .actor-name {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+
+    /* =========================
+       スマホ
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: calc(100% - 16px);
+        padding-top: 18px;
+      }
+
+
+      h1 {
+        font-size: 24px;
+      }
+
+
+      .actor-grid {
+        gap: 7px;
+      }
+
+
+      .actor-card {
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+
+      .actor-name {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+
+
+      .search-results {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+      .rank-item img {
+        width: 55px;
+        height: 55px;
+      }
+
+
+      .rank-name {
+        font-size: 14px;
+      }
+
+
+      .final-choice .actor-name {
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -334,234 +406,404 @@ h1 {
 <body>
 
 
-<!-- =========================
-     START
-========================= -->
+<div class="container">
 
-<section id="startScreen">
 
-  <div class="startBox">
+  <h1>
+    俳優 好き顔9選
+  </h1>
 
-    <div class="logoText">
-      MY FAVORITE
-    </div>
 
-    <h1>
-      俳優 好き顔9選
-    </h1>
-
-    <p class="startDescription">
-
-      たくさんの俳優の中から<br>
-
-      「顔が好き！」と思う人を<br>
-
-      直感で選んでね♡
-
-    </p>
-
-    <button
-      class="startButton"
-      onclick="startGame()"
-    >
-      START
-    </button>
-
+  <div class="subtitle">
+    あなたの「好き」を集めてTOP9を作ろう
   </div>
 
-</section>
 
+  <!-- =========================
+       ゲーム画面
+  ========================== -->
 
-<!-- =========================
-     GAME
-========================= -->
+  <div id="gameScreen">
 
-<section
-  id="gameScreen"
-  class="hidden"
->
-
-  <div class="topArea">
 
     <div
-      id="phaseText"
+      id="phaseTitle"
       class="phase"
-    >
-      予選
-    </div>
+    ></div>
+
 
     <div
-      id="questionTitle"
-      class="questionTitle"
-    >
-      好きな顔を選んでね♡
-    </div>
+      id="phaseDescription"
+      class="description"
+    ></div>
+
 
     <div
-      id="progressText"
+      id="progress"
       class="progress"
-    >
-      0人選択中
-    </div>
-
-  </div>
+    ></div>
 
 
-  <div class="searchBox">
+    <div
+      id="actorGrid"
+      class="actor-grid"
+    ></div>
 
-    <input
-      id="searchInput"
-      type="text"
-      placeholder="🔍 俳優を検索"
-      oninput="searchActors()"
-    >
-
-  </div>
-
-
-  <div
-    id="actorGrid"
-    class="actorGrid"
-  ></div>
-
-
-  <div class="nextArea">
 
     <button
       id="nextButton"
-      class="nextButton"
-      onclick="nextStep()"
       disabled
     >
       次へ
     </button>
 
-    <div class="nextNotice">
-      1人以上選んでね♡
+
+    <!-- =====================
+         検索
+    ====================== -->
+
+    <div class="search-box">
+
+      <h2>
+        🔎 俳優を検索
+      </h2>
+
+
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="俳優名を検索"
+      >
+
+
+      <div
+        id="searchResults"
+        class="search-results"
+      ></div>
+
     </div>
 
-  </div>
-
-</section>
-
-
-<!-- =========================
-     RESULT
-========================= -->
-
-<section
-  id="resultScreen"
-  class="hidden"
->
-
-  <div class="resultHeader">
-
-    <h2>
-      あなたの好き顔9選♡
-    </h2>
-
-    <p>
-      顔だけで選んだTOP9
-    </p>
 
   </div>
+
+
+  <!-- =========================
+       結果画面
+  ========================== -->
 
   <div
-    id="resultGrid"
-    class="resultGrid"
-  ></div>
-
-  <button
-    class="restartButton"
-    onclick="location.reload()"
+    id="resultScreen"
+    class="hidden"
   >
-    もう一度やる
-  </button>
 
-</section>
+    <div class="result-title">
+      👑 あなたの好き顔TOP9
+    </div>
+
+
+    <div id="ranking"></div>
+
+
+    <button
+      class="restart-button"
+      onclick="location.reload()"
+    >
+      もう一度やる
+    </button>
+
+  </div>
+
+
+</div>
+
 
 
 <script>
 
-/* =================================================
-   基本データ
-================================================= */
+
+/* =====================================================
+   基本設定
+===================================================== */
+
+
+/*
+予選で一度に表示する人数
+*/
+
+const PRELIMINARY_SIZE = 9;
+
+
+/*
+本戦で一度に表示する人数
+*/
+
+const MAIN_DISPLAY_SIZE = 4;
+
+
+/*
+本戦候補を最終的に何人くらい残すか。
+
+人数に応じて自動計算するので、
+俳優を増やしてもここは基本変更不要。
+*/
+
+const MAIN_CANDIDATE_RATIO = 0.25;
+
+
+/*
+本戦で1人あたり
+平均何回くらい登場させるか。
+*/
+
+const MAIN_APPEARANCES_PER_ACTOR = 2.2;
+
+
+/*
+決勝に進める人数。
+
+基本12人。
+*/
+
+const FINAL_CANDIDATE_SIZE = 12;
+
+
+/*
+予選の再登場。
+
+0人が一番多く、
+1人がたまに、
+2人はかなり少ない。
+
+3人以上は絶対なし。
+*/
+
+const REPEAT_0_PROBABILITY = 70;
+const REPEAT_1_PROBABILITY = 28;
+const REPEAT_2_PROBABILITY = 2;
+
+
+
+/* =====================================================
+   状態
+===================================================== */
 
 let actors = [];
 
 
-/* 予選で選ばれた回数 */
+let currentPhase =
+  "preliminary";
 
-let preliminaryCounts = {};
-
-
-/* 本戦で選ばれた回数 */
-
-let mainCounts = {};
-
-
-/* 決勝で勝った回数 */
-
-let finalWins = {};
-
-
-/* 今表示している俳優 */
 
 let currentChoices = [];
 
 
-/* 今選んでいる俳優 */
-
-let currentSelected = [];
-
-
-/* 今のフェーズ */
-
-let phase = "preliminary";
+let selectedIds =
+  new Set();
 
 
-/* 予選で一度でも表示された俳優 */
+/*
+予選で一度でも表示された人
+*/
 
-let preliminarySeen = new Set();
-
-
-/* 本戦候補 */
-
-let mainCandidates = [];
+let preliminarySeen =
+  new Set();
 
 
-/* 本戦の表示回数 */
+/*
+予選で選ばれた回数
+*/
+
+let preliminaryCounts =
+  new Map();
+
+
+/*
+本戦で選ばれた回数
+*/
+
+let mainCounts =
+  new Map();
+
+
+/*
+本戦で表示された回数
+*/
+
+let mainAppearances =
+  new Map();
+
+
+/*
+直前の本戦画面に出た人
+*/
+
+let lastMainChoices =
+  new Set();
+
+
+/*
+決勝で勝った回数
+*/
+
+let finalWins =
+  new Map();
+
+
+/*
+予選の画面数
+*/
+
+let preliminaryRound = 0;
+
+
+/*
+本戦の画面数
+*/
 
 let mainRound = 0;
 
 
-/* 決勝候補 */
+/*
+本戦の総画面数
+*/
+
+let mainTotalRounds = 0;
+
+
+/*
+本戦候補
+*/
+
+let mainCandidates = [];
+
+
+/*
+決勝候補
+*/
 
 let finalCandidates = [];
 
 
-/* 決勝の比較 */
+/*
+決勝の対戦カード
+*/
 
 let finalPairs = [];
 
 
-/* 決勝で現在比較しているペア */
+/*
+決勝の現在位置
+*/
 
-let currentPairIndex = 0;
-
-
-/* 決勝の順位用スコア */
-
-let finalScores = {};
+let finalPairIndex = 0;
 
 
-/* =================================================
-   シャッフル
-================================================= */
+
+/* =====================================================
+   JSON読み込み
+===================================================== */
+
+async function loadActors() {
+
+  try {
+
+    const response =
+      await fetch("actors.json");
+
+
+    if (!response.ok) {
+
+      throw new Error(
+        "actors.jsonを読み込めませんでした"
+      );
+
+    }
+
+
+    actors =
+      await response.json();
+
+
+    if (
+      !Array.isArray(actors) ||
+      actors.length === 0
+    ) {
+
+      throw new Error(
+        "actors.jsonに俳優がありません"
+      );
+
+    }
+
+
+    /*
+    各俳優の数値を初期化
+    */
+
+    actors.forEach(actor => {
+
+      preliminaryCounts.set(
+        actor.id,
+        0
+      );
+
+
+      mainCounts.set(
+        actor.id,
+        0
+      );
+
+
+      mainAppearances.set(
+        actor.id,
+        0
+      );
+
+
+      finalWins.set(
+        actor.id,
+        0
+      );
+
+    });
+
+
+    startPreliminary();
+
+
+  } catch (error) {
+
+    console.error(error);
+
+
+    document.getElementById(
+      "actorGrid"
+    ).innerHTML = `
+
+      <p style="
+        text-align:center;
+        grid-column:1/-1;
+      ">
+        actors.jsonを読み込めませんでした。
+      </p>
+
+    `;
+
+  }
+
+}
+
+
+
+/* =====================================================
+   ランダム
+===================================================== */
 
 function shuffle(array) {
 
-  const result = [...array];
+  const result =
+    [...array];
+
 
   for (
     let i = result.length - 1;
@@ -574,296 +816,499 @@ function shuffle(array) {
         Math.random() * (i + 1)
       );
 
+
     [
       result[i],
       result[j]
-    ] =
-    [
+    ] = [
       result[j],
       result[i]
     ];
 
   }
 
+
   return result;
 
 }
 
 
-/* =================================================
-   データ読み込み
-================================================= */
+function randomPick(
+  array,
+  count
+) {
 
-async function loadActors() {
-
-  const response =
-    await fetch("actors.json");
-
-  if (!response.ok) {
-
-    throw new Error(
-      "actors.jsonが読み込めません"
-    );
-
-  }
-
-  actors =
-    await response.json();
-
-
-  if (!Array.isArray(actors)) {
-
-    throw new Error(
-      "actors.jsonの形式が正しくありません"
-    );
-
-  }
-
-
-  preliminaryCounts = {};
-  mainCounts = {};
-  finalWins = {};
-  finalScores = {};
-
-
-  actors.forEach(actor => {
-
-    preliminaryCounts[actor.id] = 0;
-    mainCounts[actor.id] = 0;
-    finalWins[actor.id] = 0;
-    finalScores[actor.id] = 0;
-
-  });
+  return shuffle(array)
+    .slice(0, count);
 
 }
 
 
-/* =================================================
-   START
-================================================= */
 
-async function startGame() {
+/* =====================================================
+   予選の再登場人数
+===================================================== */
 
-  try {
+function getRepeatCount() {
 
-    await loadActors();
+  const random =
+    Math.random() * 100;
 
-  } catch (error) {
 
-    alert(
-      "actors.jsonを読み込めませんでした。"
-    );
+  if (
+    random <
+    REPEAT_0_PROBABILITY
+  ) {
 
-    console.error(error);
-
-    return;
+    return 0;
 
   }
 
 
-  if (actors.length < 2) {
+  if (
+    random <
+    REPEAT_0_PROBABILITY +
+    REPEAT_1_PROBABILITY
+  ) {
 
-    alert(
-      "俳優を2人以上登録してください。"
-    );
-
-    return;
+    return 1;
 
   }
 
 
-  document
-    .getElementById("startScreen")
-    .classList.add("hidden");
-
-  document
-    .getElementById("gameScreen")
-    .classList.remove("hidden");
-
-
-  phase = "preliminary";
-
-  preliminarySeen = new Set();
-
-  currentSelected = [];
-
-  showPreliminaryRound();
+  return 2;
 
 }
 
 
-/* =================================================
-   予選
-================================================= */
 
-function showPreliminaryRound() {
+/* =====================================================
+   予選開始
+===================================================== */
 
-  currentSelected = [];
+
+/*
+予選の基本方針：
+
+「まだ出ていない俳優を最優先」
+
+ただし、新規が十分残っている場合は、
+低確率で既出の俳優を1〜2人混ぜる。
+
+
+そのため、
+
+・新規9人
+・新規8人＋再登場1人
+・新規7人＋再登場2人
+
+などが発生する。
+
+
+ただし再登場はかなり少ない。
+
+
+そして最終的には、
+全員が最低1回は登場する。
+*/
+
+function startPreliminary() {
+
+  currentPhase =
+    "preliminary";
+
+
+  preliminaryRound++;
+
+
+  selectedIds.clear();
+
+
+  const displaySize =
+    Math.min(
+      PRELIMINARY_SIZE,
+      actors.length
+    );
 
 
   /*
-    まだ一度も出ていない俳優を優先する。
-
-    その中から最大4人。
+  まだ一度も出ていない俳優
   */
 
   const unseen =
-    shuffle(
-      actors.filter(
-        actor =>
-          !preliminarySeen.has(actor.id)
-      )
-    );
-
-
-  let choices =
-    unseen.slice(
-      0,
-      Math.min(4, actors.length)
+    actors.filter(
+      actor =>
+        !preliminarySeen.has(
+          actor.id
+        )
     );
 
 
   /*
-    未登場の俳優が4人未満なら、
-    すでに登場した俳優も混ぜる。
-
-    これによって同じ人が
-    もう一度出ることがある。
+  すでに出た俳優
   */
 
-  if (choices.length < 4) {
-
-    const remaining =
-      shuffle(
-        actors.filter(
-          actor =>
-            !choices.some(
-              c => c.id === actor.id
-            )
+  const seen =
+    actors.filter(
+      actor =>
+        preliminarySeen.has(
+          actor.id
         )
-      );
+    );
 
 
-    choices =
-      choices.concat(
-        remaining.slice(
-          0,
-          4 - choices.length
-        )
-      );
+  let repeatCount = 0;
+
+
+  /*
+  新規が十分いるときだけ
+  再登場抽選をする。
+
+  これによって
+  全員を見ることを優先する。
+  */
+
+  if (
+    seen.length > 0 &&
+    unseen.length >= displaySize
+  ) {
+
+    repeatCount =
+      getRepeatCount();
 
   }
 
 
-  currentChoices = choices;
+  /*
+  再登場は最大2人
+  */
+
+  repeatCount =
+    Math.min(
+      repeatCount,
+      2,
+      seen.length
+    );
 
 
   /*
-    表示された人を記録
+  新規人数
+  */
+
+  let newCount =
+    Math.min(
+      displaySize - repeatCount,
+      unseen.length
+    );
+
+
+  /*
+  新規俳優
+  */
+
+  const newActors =
+    randomPick(
+      unseen,
+      newCount
+    );
+
+
+  /*
+  足りない分だけ既出から補充
+  */
+
+  const remaining =
+    displaySize -
+    newActors.length;
+
+
+  const repeatActors =
+    randomPick(
+      seen,
+      remaining
+    );
+
+
+  /*
+  9人を作る
+  */
+
+  currentChoices =
+    shuffle([
+      ...newActors,
+      ...repeatActors
+    ]);
+
+
+  /*
+  表示された人を
+  登場済みにする
   */
 
   currentChoices.forEach(
     actor => {
-      preliminarySeen.add(actor.id);
+
+      preliminarySeen.add(
+        actor.id
+      );
+
     }
   );
 
 
-  document
-    .getElementById("phaseText")
-    .textContent =
+  renderPreliminary();
+
+}
+
+
+
+/* =====================================================
+   予選画面
+===================================================== */
+
+function renderPreliminary() {
+
+  document.getElementById(
+    "phaseTitle"
+  ).textContent =
     "予選";
 
 
-  document
-    .getElementById("questionTitle")
-    .textContent =
-    "この中で好きな顔を選んでね♡";
+  document.getElementById(
+    "phaseDescription"
+  ).textContent =
+    "気になる俳優を好きなだけ選んでください";
 
 
-  document
-    .getElementById("progressText")
-    .textContent =
-    preliminarySeen.size +
-    " / " +
-    actors.length +
-    "人 登場済み";
-
-
-  document
-    .getElementById("searchInput")
-    .value = "";
+  document.getElementById(
+    "progress"
+  ).textContent =
+    `予選 ${preliminaryRound}`;
 
 
   renderActors();
 
-  updateSelectionDisplay();
+
+  document.getElementById(
+    "nextButton"
+  ).textContent =
+    "次へ";
 
 }
 
 
-/* =================================================
-   本戦へ進むか確認
-================================================= */
 
-function checkPreliminaryFinished() {
+/* =====================================================
+   予選終了
+===================================================== */
 
-  return (
-    preliminarySeen.size >= actors.length
+function finishPreliminaryRound() {
+
+  /*
+  選択された俳優の
+  「好き」回数を増やす。
+
+  ここでは選択した順番を
+  一切記録しない。
+  */
+
+  selectedIds.forEach(
+    id => {
+
+      preliminaryCounts.set(
+        id,
+        (preliminaryCounts.get(id) || 0) + 1
+      );
+
+    }
   );
-
-}
-
-
-/* =================================================
-   本戦開始
-================================================= */
-
-function startMainRound() {
-
-  phase = "main";
-
-  currentSelected = [];
 
 
   /*
-    予選の選択回数順に並べる。
-
-    同点ならランダム。
+  全員が最低1回登場したか
   */
 
-  const ranking =
-    [...actors].sort(
-      (a, b) => {
-
-        const diff =
-          preliminaryCounts[b.id] -
-          preliminaryCounts[a.id];
-
-        if (diff !== 0) {
-
-          return diff;
-
-        }
-
-        return Math.random() - 0.5;
-
-      }
+  const allSeen =
+    actors.every(
+      actor =>
+        preliminarySeen.has(
+          actor.id
+        )
     );
 
 
   /*
-    本戦は最大12人。
-
-    16人なら12人。
-
-    500人なら12人。
+  まだ出ていない人がいれば
+  予選続行
   */
 
+  if (!allSeen) {
+
+    startPreliminary();
+
+    return;
+
+  }
+
+
+  /*
+  全員見たら本戦候補を作る
+  */
+
+  prepareMain();
+
+}
+
+
+
+/* =====================================================
+   本戦候補を作る
+===================================================== */
+
+
+/*
+予選の選択回数を使って
+本戦へ進む人を絞る。
+
+
+ただし単純に
+「上位だけ」に固定しない。
+
+
+同じくらいの選択回数の人は
+少しランダム性を持たせる。
+*/
+
+function prepareMain() {
+
+  /*
+  予選選択回数を取得
+  */
+
+  const scored =
+    actors.map(actor => ({
+
+      actor: actor,
+
+      score:
+        preliminaryCounts.get(
+          actor.id
+        ) || 0
+
+    }));
+
+
+  /*
+  選択回数が多い順
+  */
+
+  scored.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+
+  /*
+  本戦候補人数。
+
+
+  100人
+  → 約25人
+
+
+  500人
+  → 約125人
+
+
+  1000人
+  → 約250人
+
+
+  のように自動。
+  */
+
+  let candidateCount =
+    Math.ceil(
+      actors.length *
+      MAIN_CANDIDATE_RATIO
+    );
+
+
+  /*
+  最低18人
+  */
+
+  candidateCount =
+    Math.max(
+      candidateCount,
+      18
+    );
+
+
+  /*
+  俳優が少ない場合
+  全員を超えないようにする
+  */
+
+  candidateCount =
+    Math.min(
+      candidateCount,
+      actors.length
+    );
+
+
+  /*
+  同じ選択回数の人たちを
+  完全固定にしないため、
+  スコアに小さなランダム値を足す。
+  */
+
+  const randomized =
+    scored.map(item => ({
+
+      actor: item.actor,
+
+      score:
+        item.score * 100 +
+        Math.random() * 20
+
+    }));
+
+
+  randomized.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+
   mainCandidates =
-    ranking.slice(
-      0,
-      Math.min(12, ranking.length)
+    randomized
+      .slice(
+        0,
+        candidateCount
+      )
+      .map(
+        item => item.actor
+      );
+
+
+  /*
+  本戦の回数を人数に応じて自動計算。
+
+  候補人数 × 2.2回
+  ÷ 4人表示
+
+  という考え方。
+  */
+
+  mainTotalRounds =
+    Math.max(
+      8,
+      Math.ceil(
+        mainCandidates.length *
+        MAIN_APPEARANCES_PER_ACTOR /
+        MAIN_DISPLAY_SIZE
+      )
     );
 
 
@@ -871,167 +1316,644 @@ function startMainRound() {
 
 
   /*
-    本戦候補の選択回数をリセット
+  本戦開始
   */
 
-  mainCandidates.forEach(
-    actor => {
-      mainCounts[actor.id] = 0;
-    }
-  );
-
-
-  showMainRound();
+  startMain();
 
 }
 
 
-/* =================================================
-   本戦
-================================================= */
 
-function showMainRound() {
+/* =====================================================
+   本戦で表示する4人を選ぶ
+===================================================== */
 
-  currentSelected = [];
+
+/*
+本戦では、
+単純な完全ランダムにはしない。
+
+
+・選択回数が多い人
+  → 少し優先
+
+
+・まだあまり表示されていない人
+  → 出やすくする
+
+
+・直前に出た人
+  → できるだけ避ける
+
+
+というバランス。
+*/
+
+function chooseMainActors() {
+
+  const candidates =
+    [...mainCandidates];
 
 
   /*
-    本戦候補から4人をランダム表示。
-
-    何回か繰り返す。
+  直前に出た人を除いた候補
   */
 
-  const shuffled =
-    shuffle(mainCandidates);
-
-
-  currentChoices =
-    shuffled.slice(
-      0,
-      Math.min(4, mainCandidates.length)
+  let available =
+    candidates.filter(
+      actor =>
+        !lastMainChoices.has(
+          actor.id
+        )
     );
+
+
+  /*
+  4人確保できない場合は
+  全候補を使う
+  */
+
+  if (
+    available.length <
+    MAIN_DISPLAY_SIZE
+  ) {
+
+    available =
+      candidates;
+
+  }
+
+
+  /*
+  各候補に重みをつける
+  */
+
+  const scored =
+    available.map(actor => {
+
+      const selectionCount =
+        mainCounts.get(
+          actor.id
+        ) || 0;
+
+
+      const appearanceCount =
+        mainAppearances.get(
+          actor.id
+        ) || 0;
+
+
+      /*
+      選ばれた回数が多いほど
+      少し優先。
+
+
+      でも表示回数が多いほど
+      出にくくする。
+
+
+      これによって
+      「好きな人が何度も出続ける」
+      のを防ぐ。
+      */
+
+      const weight =
+        1 +
+        selectionCount * 1.5 +
+        Math.random() * 3 -
+        appearanceCount * 0.8;
+
+
+      return {
+
+        actor,
+
+        weight:
+          Math.max(
+            0.1,
+            weight
+          )
+
+      };
+
+    });
+
+
+  /*
+  重み付きで4人選ぶ
+  */
+
+  const result = [];
+
+
+  while (
+    result.length <
+      Math.min(
+        MAIN_DISPLAY_SIZE,
+        scored.length
+      )
+  ) {
+
+    let totalWeight =
+      scored.reduce(
+        (sum, item) =>
+          sum + item.weight,
+        0
+      );
+
+
+    let random =
+      Math.random() *
+      totalWeight;
+
+
+    let chosenIndex = 0;
+
+
+    for (
+      let i = 0;
+      i < scored.length;
+      i++
+    ) {
+
+      random -=
+        scored[i].weight;
+
+
+      if (
+        random <= 0
+      ) {
+
+        chosenIndex = i;
+
+        break;
+
+      }
+
+    }
+
+
+    result.push(
+      scored[chosenIndex].actor
+    );
+
+
+    scored.splice(
+      chosenIndex,
+      1
+    );
+
+  }
+
+
+  return shuffle(result);
+
+}
+
+
+
+/* =====================================================
+   本戦開始
+===================================================== */
+
+function startMain() {
+
+  currentPhase =
+    "main";
 
 
   mainRound++;
 
 
-  document
-    .getElementById("phaseText")
-    .textContent =
-    "本戦";
-
-
-  document
-    .getElementById("questionTitle")
-    .textContent =
-    "この中から好きな顔を選んでね♡";
-
-
-  document
-    .getElementById("progressText")
-    .textContent =
-    "本戦 " +
-    mainRound +
-    "回目";
-
-
-  document
-    .getElementById("searchInput")
-    .value = "";
-
-
-  renderActors();
-
-  updateSelectionDisplay();
-
-}
-
-
-/* =================================================
-   決勝開始
-================================================= */
-
-function startFinal() {
-
-  phase = "final";
+  selectedIds.clear();
 
 
   /*
-    本戦の結果で並べる。
-
-    上位9人を決勝候補にする。
+  4人を選ぶ
   */
 
-  const ranking =
-    [...mainCandidates].sort(
-      (a, b) => {
-
-        const diff =
-          mainCounts[b.id] -
-          mainCounts[a.id];
-
-        if (diff !== 0) {
-
-          return diff;
-
-        }
-
-        return Math.random() - 0.5;
-
-      }
-    );
-
-
-  finalCandidates =
-    ranking.slice(
-      0,
-      Math.min(9, ranking.length)
-    );
+  currentChoices =
+    chooseMainActors();
 
 
   /*
-    決勝用スコアを0にする
+  表示回数を記録
   */
 
-  finalCandidates.forEach(
+  currentChoices.forEach(
     actor => {
 
-      finalScores[actor.id] = 0;
-      finalWins[actor.id] = 0;
+      mainAppearances.set(
+        actor.id,
+        (mainAppearances.get(
+          actor.id
+        ) || 0) + 1
+      );
 
     }
   );
 
 
   /*
-    9人ならランダムに
-    2人ずつ比較する。
+  次回はできるだけ
+  同じ4人を避ける
+  */
 
-    各人が複数回比較される。
+  lastMainChoices =
+    new Set(
+      currentChoices.map(
+        actor => actor.id
+      )
+    );
+
+
+  renderMain();
+
+}
+
+
+
+/* =====================================================
+   本戦画面
+===================================================== */
+
+function renderMain() {
+
+  document.getElementById(
+    "phaseTitle"
+  ).textContent =
+    "本戦";
+
+
+  document.getElementById(
+    "phaseDescription"
+  ).textContent =
+    "この4人の中から、好きな人を選んでください";
+
+
+  document.getElementById(
+    "progress"
+  ).textContent =
+    `本戦 ${mainRound} / ${mainTotalRounds}`;
+
+
+  renderActors();
+
+
+  document.getElementById(
+    "nextButton"
+  ).textContent =
+    "次へ";
+
+}
+
+
+
+/* =====================================================
+   本戦終了
+===================================================== */
+
+function finishMainRound() {
+
+  /*
+  選ばれた人だけ
+  本戦ポイントを加算
+  */
+
+  selectedIds.forEach(
+    id => {
+
+      mainCounts.set(
+        id,
+        (mainCounts.get(id) || 0) + 1
+      );
+
+    }
+  );
+
+
+  /*
+  本戦がまだ残っている
+  */
+
+  if (
+    mainRound <
+    mainTotalRounds
+  ) {
+
+    /*
+    本戦の途中で
+    徐々に候補を絞る。
+
+
+    1/3地点
+    2/3地点
+    で絞る。
+    */
+
+    const firstCut =
+      Math.ceil(
+        mainTotalRounds / 3
+      );
+
+
+    const secondCut =
+      Math.ceil(
+        mainTotalRounds * 2 / 3
+      );
+
+
+    if (
+      mainRound === firstCut ||
+      mainRound === secondCut
+    ) {
+
+      narrowMainCandidates();
+
+    }
+
+
+    startMain();
+
+    return;
+
+  }
+
+
+  /*
+  本戦終了時にも
+  最終的に絞る。
+  */
+
+  narrowMainCandidates();
+
+
+  /*
+  決勝へ
+  */
+
+  prepareFinal();
+
+}
+
+
+
+/* =====================================================
+   本戦候補を絞る
+===================================================== */
+
+
+/*
+本戦での選択回数を
+強く評価。
+
+
+予選の選択回数も
+少しだけ残す。
+
+
+ただし完全固定ではなく、
+同点付近にはランダム性を入れる。
+*/
+
+function narrowMainCandidates() {
+
+  const scored =
+    mainCandidates.map(
+      actor => {
+
+        const mainScore =
+          mainCounts.get(
+            actor.id
+          ) || 0;
+
+
+        const prelimScore =
+          preliminaryCounts.get(
+            actor.id
+          ) || 0;
+
+
+        const score =
+          mainScore * 4 +
+          prelimScore;
+
+
+        return {
+
+          actor,
+
+          score:
+            score +
+            Math.random() * 1.5
+
+        };
+
+      }
+    );
+
+
+  scored.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+
+  /*
+  現在人数の約70%を残す。
+
+
+  例：
+
+  100人
+  ↓
+  25人
+
+  25人
+  ↓
+  18人
+
+  18人
+  ↓
+  13人
+
+
+  のように徐々に減る。
+  */
+
+  let keepCount =
+    Math.ceil(
+      scored.length * 0.7
+    );
+
+
+  /*
+  最低12人
+  */
+
+  keepCount =
+    Math.max(
+      keepCount,
+      FINAL_CANDIDATE_SIZE
+    );
+
+
+  /*
+  多すぎないように
+  */
+
+  keepCount =
+    Math.min(
+      keepCount,
+      scored.length
+    );
+
+
+  mainCandidates =
+    scored
+      .slice(
+        0,
+        keepCount
+      )
+      .map(
+        item => item.actor
+      );
+
+}
+
+
+
+/* =====================================================
+   決勝候補を作る
+===================================================== */
+
+function prepareFinal() {
+
+  /*
+  本戦候補を最終評価
+  */
+
+  const scored =
+    mainCandidates.map(
+      actor => {
+
+        const mainScore =
+          mainCounts.get(
+            actor.id
+          ) || 0;
+
+
+        const prelimScore =
+          preliminaryCounts.get(
+            actor.id
+          ) || 0;
+
+
+        /*
+        本戦を一番重視。
+
+        予選は補助。
+        */
+
+        const score =
+          mainScore * 5 +
+          prelimScore;
+
+
+        return {
+
+          actor,
+
+          score:
+            score +
+            Math.random() * 2
+
+        };
+
+      }
+    );
+
+
+  scored.sort(
+    (a, b) =>
+      b.score - a.score
+  );
+
+
+  /*
+  基本12人。
+
+  人数が少なければ
+  その人数まで。
+  */
+
+  const candidateCount =
+    Math.min(
+      FINAL_CANDIDATE_SIZE,
+      scored.length
+    );
+
+
+  finalCandidates =
+    scored
+      .slice(
+        0,
+        candidateCount
+      )
+      .map(
+        item => item.actor
+      );
+
+
+  /*
+  決勝の勝利数を初期化
+  */
+
+  finalCandidates.forEach(
+    actor => {
+
+      finalWins.set(
+        actor.id,
+        0
+      );
+
+    }
+  );
+
+
+  /*
+  2人ずつ全組み合わせで対戦。
+
+  12人なら66試合。
+
+  これによって
+  「最後にたまたま1回勝っただけ」
+  ではなく、
+  全体的な強さを見る。
   */
 
   finalPairs = [];
 
 
-  const shuffled =
-    shuffle(finalCandidates);
-
-
   for (
     let i = 0;
-    i < shuffled.length;
+    i < finalCandidates.length;
     i++
   ) {
 
     for (
       let j = i + 1;
-      j < shuffled.length;
+      j < finalCandidates.length;
       j++
     ) {
 
       finalPairs.push([
-        shuffled[i],
-        shuffled[j]
+
+        finalCandidates[i],
+
+        finalCandidates[j]
+
       ]);
 
     }
@@ -1043,546 +1965,164 @@ function startFinal() {
     shuffle(finalPairs);
 
 
-  currentPairIndex = 0;
+  finalPairIndex = 0;
 
 
-  showFinalPair();
+  startFinal();
 
 }
 
 
-/* =================================================
-   決勝 2択
-================================================= */
 
-function showFinalPair() {
+/* =====================================================
+   決勝開始
+===================================================== */
+
+function startFinal() {
+
+  currentPhase =
+    "final";
+
+
+  selectedIds.clear();
+
+
+  /*
+  すべての対戦が終わったら
+  結果へ
+  */
 
   if (
-    currentPairIndex >=
+    finalPairIndex >=
     finalPairs.length
   ) {
 
-    finishFinal();
+    showResult();
 
     return;
 
   }
 
 
-  currentSelected = [];
+  currentChoices =
+    finalPairs[
+      finalPairIndex
+    ];
 
 
-  const pair =
-    finalPairs[currentPairIndex];
+  renderFinal();
+
+}
 
 
-  currentChoices = pair;
 
+/* =====================================================
+   決勝画面
+===================================================== */
 
-  document
-    .getElementById("phaseText")
-    .textContent =
+function renderFinal() {
+
+  document.getElementById(
+    "phaseTitle"
+  ).textContent =
     "決勝";
 
 
-  document
-    .getElementById("questionTitle")
-    .textContent =
-    "どっちの顔が好き？♡";
+  document.getElementById(
+    "phaseDescription"
+  ).textContent =
+    "2人のうち、より好きな方を選んでください";
 
 
-  document
-    .getElementById("progressText")
-    .textContent =
-    "2人から1人選んでね";
+  document.getElementById(
+    "progress"
+  ).textContent =
+    `決勝 ${finalPairIndex + 1} / ${finalPairs.length}`;
 
-
-  document
-    .getElementById("searchInput")
-    .value = "";
-
-
-  renderActors();
-
-  updateSelectionDisplay();
-
-}
-
-
-/* =================================================
-   俳優表示
-================================================= */
-
-function renderActors(
-  list = currentChoices
-) {
 
   const grid =
-    document.getElementById("actorGrid");
+    document.getElementById(
+      "actorGrid"
+    );
+
+
+  grid.className =
+    "actor-grid final-choice";
 
 
   grid.innerHTML = "";
 
 
-  list.forEach(actor => {
-
-    const card =
-      document.createElement("div");
-
-
-    card.className =
-      "actorCard";
-
-
-    if (
-      currentSelected.some(
-        selected =>
-          selected.id === actor.id
-      )
-    ) {
-
-      card.classList.add("selected");
-
-    }
-
-
-    card.innerHTML = `
-
-      <img
-        class="actorImage"
-        src="${actor.image}"
-        alt="${actor.name}"
-        loading="lazy"
-      >
-
-      <div class="actorName">
-        ${actor.name}
-      </div>
-
-    `;
-
-
-    card.addEventListener(
-      "click",
-      () => {
-
-        toggleActor(
-          actor,
-          card
-        );
-
-      }
-    );
-
-
-    grid.appendChild(card);
-
-  });
-
-}
-
-
-/* =================================================
-   選択
-================================================= */
-
-function toggleActor(
-  actor,
-  card
-) {
-
-  /*
-    決勝は必ず1人だけ。
-
-    予選・本戦は複数選択OK。
-  */
-
-  if (phase === "final") {
-
-    currentSelected = [actor];
-
-
-    document
-      .querySelectorAll(".actorCard")
-      .forEach(
-        c => c.classList.remove("selected")
-      );
-
-
-    card.classList.add("selected");
-
-
-    updateSelectionDisplay();
-
-    return;
-
-  }
-
-
-  const index =
-    currentSelected.findIndex(
-      selected =>
-        selected.id === actor.id
-    );
-
-
-  if (index !== -1) {
-
-    currentSelected.splice(
-      index,
-      1
-    );
-
-    card.classList.remove(
-      "selected"
-    );
-
-  }
-
-  else {
-
-    currentSelected.push(actor);
-
-    card.classList.add(
-      "selected"
-    );
-
-  }
-
-
-  updateSelectionDisplay();
-
-}
-
-
-/* =================================================
-   選択表示
-================================================= */
-
-function updateSelectionDisplay() {
-
-  const count =
-    currentSelected.length;
-
-
-  if (phase === "preliminary") {
-
-    document
-      .getElementById("progressText")
-      .textContent =
-      preliminarySeen.size +
-      " / " +
-      actors.length +
-      "人 登場済み";
-
-  }
-
-
-  document
-    .getElementById("nextButton")
-    .disabled =
-    count === 0;
-
-}
-
-
-/* =================================================
-   次へ
-================================================= */
-
-function nextStep() {
-
-  if (
-    currentSelected.length === 0
-  ) {
-
-    alert(
-      "最低1人は選んでね♡"
-    );
-
-    return;
-
-  }
-
-
-  /* =========================
-     予選
-  ========================= */
-
-  if (phase === "preliminary") {
-
-    currentSelected.forEach(
-      actor => {
-
-        preliminaryCounts[
-          actor.id
-        ]++;
-
-      }
-    );
-
-
-    /*
-      全員が一度以上登場したら
-      本戦へ。
-    */
-
-    if (
-      checkPreliminaryFinished()
-    ) {
-
-      startMainRound();
-
-      return;
-
-    }
-
-
-    showPreliminaryRound();
-
-    return;
-
-  }
-
-
-  /* =========================
-     本戦
-  ========================= */
-
-  if (phase === "main") {
-
-    currentSelected.forEach(
-      actor => {
-
-        mainCounts[
-          actor.id
-        ]++;
-
-      }
-    );
-
-
-    /*
-      本戦を一定回数行う。
-
-      12人なら6回。
-
-      俳優数が変わっても
-      ある程度自動調整。
-    */
-
-    const mainLimit =
-      Math.max(
-        6,
-        Math.ceil(
-          mainCandidates.length * 0.5
-        )
-      );
-
-
-    if (
-      mainRound >= mainLimit
-    ) {
-
-      startFinal();
-
-      return;
-
-    }
-
-
-    showMainRound();
-
-    return;
-
-  }
-
-
-  /* =========================
-     決勝
-  ========================= */
-
-  if (phase === "final") {
-
-    const winner =
-      currentSelected[0];
-
-
-    finalScores[
-      winner.id
-    ]++;
-
-
-    finalWins[
-      winner.id
-    ]++;
-
-
-    currentPairIndex++;
-
-
-    showFinalPair();
-
-  }
-
-}
-
-
-/* =================================================
-   検索
-================================================= */
-
-function searchActors() {
-
-  const keyword =
-    document
-      .getElementById("searchInput")
-      .value
-      .trim()
-      .toLowerCase();
-
-
-  /*
-    空欄なら現在の候補へ
-  */
-
-  if (keyword === "") {
-
-    renderActors();
-
-    return;
-
-  }
-
-
-  /*
-    全俳優から検索。
-
-    検索結果を表示するだけ。
-
-    ここから選択することもできる。
-  */
-
-  const results =
-    actors.filter(
-      actor =>
-        actor.name
-          .toLowerCase()
-          .includes(keyword)
-    );
-
-
-  renderActors(results);
-
-}
-
-
-/* =================================================
-   最終結果
-================================================= */
-
-function finishFinal() {
-
-  /*
-    決勝の勝利数で順位を決定。
-
-    同点の場合は本戦結果を参考にする。
-  */
-
-  const ranking =
-    [...finalCandidates].sort(
-      (a, b) => {
-
-        const finalDiff =
-          finalScores[b.id] -
-          finalScores[a.id];
-
-
-        if (finalDiff !== 0) {
-
-          return finalDiff;
-
-        }
-
-
-        const mainDiff =
-          mainCounts[b.id] -
-          mainCounts[a.id];
-
-
-        if (mainDiff !== 0) {
-
-          return mainDiff;
-
-        }
-
-
-        return Math.random() - 0.5;
-
-      }
-    );
-
-
-  showResult(
-    ranking.slice(
-      0,
-      Math.min(9, ranking.length)
-    )
-  );
-
-}
-
-
-/* =================================================
-   結果表示
-================================================= */
-
-function showResult(result) {
-
-  document
-    .getElementById("gameScreen")
-    .classList.add("hidden");
-
-
-  document
-    .getElementById("resultScreen")
-    .classList.remove("hidden");
-
-
-  const grid =
-    document.getElementById("resultGrid");
-
-
-  grid.innerHTML = "";
-
-
-  result.forEach(
-    (actor, index) => {
+  currentChoices.forEach(
+    actor => {
 
       const card =
-        document.createElement("div");
+        document.createElement(
+          "div"
+        );
 
 
       card.className =
-        "resultCard";
+        "actor-card";
 
 
-      card.innerHTML = `
+      card.dataset.id =
+        actor.id;
 
-        <div class="resultRank">
-          NO.${index + 1}
-        </div>
 
-        <img
-          src="${actor.image}"
-          alt="${actor.name}"
-        >
+      const img =
+        document.createElement(
+          "img"
+        );
 
-        <div class="resultName">
-          ${actor.name}
-        </div>
 
-      `;
+      img.src =
+        actor.image ||
+        `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+
+      img.alt =
+        actor.name;
+
+
+      img.onerror =
+        function() {
+
+          this.src =
+            `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+        };
+
+
+      const name =
+        document.createElement(
+          "div"
+        );
+
+
+      name.className =
+        "actor-name";
+
+
+      name.textContent =
+        actor.name;
+
+
+      card.appendChild(img);
+
+      card.appendChild(name);
+
+
+      card.addEventListener(
+        "click",
+        () => {
+
+          selectActor(
+            actor.id
+          );
+
+        }
+      );
 
 
       grid.appendChild(card);
@@ -1590,7 +2130,615 @@ function showResult(result) {
     }
   );
 
+
+  document.getElementById(
+    "nextButton"
+  ).disabled = true;
+
+
+  document.getElementById(
+    "nextButton"
+  ).textContent =
+    "決定";
+
 }
+
+
+
+/* =====================================================
+   決勝終了
+===================================================== */
+
+function finishFinalRound() {
+
+  if (
+    selectedIds.size !== 1
+  ) {
+
+    return;
+
+  }
+
+
+  /*
+  選ばれた1人が勝利
+  */
+
+  const winner =
+    [...selectedIds][0];
+
+
+  finalWins.set(
+    winner,
+    (finalWins.get(winner) || 0) + 1
+  );
+
+
+  finalPairIndex++;
+
+
+  startFinal();
+
+}
+
+
+
+/* =====================================================
+   通常画面表示
+===================================================== */
+
+function renderActors() {
+
+  const grid =
+    document.getElementById(
+      "actorGrid"
+    );
+
+
+  grid.className =
+    "actor-grid";
+
+
+  grid.innerHTML = "";
+
+
+  currentChoices.forEach(
+    actor => {
+
+      const card =
+        document.createElement(
+          "div"
+        );
+
+
+      card.className =
+        "actor-card";
+
+
+      card.dataset.id =
+        actor.id;
+
+
+      /*
+      写真
+      */
+
+      const img =
+        document.createElement(
+          "img"
+        );
+
+
+      img.src =
+        actor.image ||
+        `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+
+      img.alt =
+        actor.name;
+
+
+      /*
+      画像が存在しない場合
+      プレースホルダーを表示
+      */
+
+      img.onerror =
+        function() {
+
+          this.src =
+            `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+        };
+
+
+      /*
+      名前
+      */
+
+      const name =
+        document.createElement(
+          "div"
+        );
+
+
+      name.className =
+        "actor-name";
+
+
+      name.textContent =
+        actor.name;
+
+
+      card.appendChild(img);
+
+      card.appendChild(name);
+
+
+      /*
+      タップ
+      */
+
+      card.addEventListener(
+        "click",
+        () => {
+
+          selectActor(
+            actor.id
+          );
+
+        }
+      );
+
+
+      grid.appendChild(card);
+
+    }
+  );
+
+
+  updateNextButton();
+
+}
+
+
+
+/* =====================================================
+   俳優を選択
+===================================================== */
+
+function selectActor(id) {
+
+  /*
+  選択状態をON/OFF
+  */
+
+  if (
+    selectedIds.has(id)
+  ) {
+
+    selectedIds.delete(id);
+
+  } else {
+
+    selectedIds.add(id);
+
+  }
+
+
+  /*
+  見た目を更新
+  */
+
+  document
+    .querySelectorAll(
+      ".actor-card"
+    )
+    .forEach(card => {
+
+      if (
+        selectedIds.has(
+          card.dataset.id
+        )
+      ) {
+
+        card.classList.add(
+          "selected"
+        );
+
+      } else {
+
+        card.classList.remove(
+          "selected"
+        );
+
+      }
+
+    });
+
+
+  updateNextButton();
+
+}
+
+
+
+/* =====================================================
+   次へボタン
+===================================================== */
+
+function updateNextButton() {
+
+  const button =
+    document.getElementById(
+      "nextButton"
+    );
+
+
+  /*
+  必ず1人以上選択
+  */
+
+  button.disabled =
+    selectedIds.size === 0;
+
+}
+
+
+
+/* =====================================================
+   次へ
+===================================================== */
+
+document
+  .getElementById(
+    "nextButton"
+  )
+  .addEventListener(
+    "click",
+    () => {
+
+      if (
+        selectedIds.size === 0
+      ) {
+
+        return;
+
+      }
+
+
+      if (
+        currentPhase ===
+        "preliminary"
+      ) {
+
+        finishPreliminaryRound();
+
+      }
+
+
+      else if (
+        currentPhase ===
+        "main"
+      ) {
+
+        finishMainRound();
+
+      }
+
+
+      else if (
+        currentPhase ===
+        "final"
+      ) {
+
+        finishFinalRound();
+
+      }
+
+    }
+  );
+
+
+
+/* =====================================================
+   検索
+===================================================== */
+
+document
+  .getElementById(
+    "searchInput"
+  )
+  .addEventListener(
+    "input",
+    event => {
+
+      const keyword =
+        event.target.value
+          .trim()
+          .toLowerCase();
+
+
+      const resultBox =
+        document.getElementById(
+          "searchResults"
+        );
+
+
+      resultBox.innerHTML = "";
+
+
+      if (
+        keyword === ""
+      ) {
+
+        return;
+
+      }
+
+
+      const results =
+        actors.filter(
+          actor =>
+            actor.name
+              .toLowerCase()
+              .includes(keyword)
+        );
+
+
+      results
+        .slice(0, 30)
+        .forEach(
+          actor => {
+
+            const div =
+              document.createElement(
+                "div"
+              );
+
+
+            div.className =
+              "search-result";
+
+
+            div.textContent =
+              actor.name;
+
+
+            resultBox.appendChild(
+              div
+            );
+
+          }
+        );
+
+    }
+  );
+
+
+
+/* =====================================================
+   結果
+===================================================== */
+
+function showResult() {
+
+  currentPhase =
+    "result";
+
+
+  document.getElementById(
+    "gameScreen"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "resultScreen"
+  ).classList.remove(
+    "hidden"
+  );
+
+
+  /*
+  最終ランキング。
+
+
+  ① 決勝勝利数
+  ② 本戦選択回数
+  ③ 予選選択回数
+
+
+  の順。
+
+
+  「何番目にタップしたか」は
+  一切使わない。
+  */
+
+
+  const ranked =
+    [...finalCandidates];
+
+
+  ranked.sort(
+    (a, b) => {
+
+      const finalA =
+        finalWins.get(
+          a.id
+        ) || 0;
+
+
+      const finalB =
+        finalWins.get(
+          b.id
+        ) || 0;
+
+
+      if (
+        finalB !== finalA
+      ) {
+
+        return finalB - finalA;
+
+      }
+
+
+      const mainA =
+        mainCounts.get(
+          a.id
+        ) || 0;
+
+
+      const mainB =
+        mainCounts.get(
+          b.id
+        ) || 0;
+
+
+      if (
+        mainB !== mainA
+      ) {
+
+        return mainB - mainA;
+
+      }
+
+
+      const prelimA =
+        preliminaryCounts.get(
+          a.id
+        ) || 0;
+
+
+      const prelimB =
+        preliminaryCounts.get(
+          b.id
+        ) || 0;
+
+
+      return prelimB - prelimA;
+
+    }
+  );
+
+
+  /*
+  TOP9だけ表示
+  */
+
+  const top9 =
+    ranked.slice(0, 9);
+
+
+  const ranking =
+    document.getElementById(
+      "ranking"
+    );
+
+
+  ranking.innerHTML = "";
+
+
+  top9.forEach(
+    (actor, index) => {
+
+      const item =
+        document.createElement(
+          "div"
+        );
+
+
+      item.className =
+        "rank-item";
+
+
+      const number =
+        document.createElement(
+          "div"
+        );
+
+
+      number.className =
+        "rank-number";
+
+
+      number.textContent =
+        index + 1;
+
+
+      const img =
+        document.createElement(
+          "img"
+        );
+
+
+      img.src =
+        actor.image ||
+        `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+
+      img.alt =
+        actor.name;
+
+
+      img.onerror =
+        function() {
+
+          this.src =
+            `https://placehold.co/500x500?text=${encodeURIComponent(actor.name)}`;
+
+        };
+
+
+      const name =
+        document.createElement(
+          "div"
+        );
+
+
+      name.className =
+        "rank-name";
+
+
+      name.textContent =
+        actor.name;
+
+
+      item.appendChild(
+        number
+      );
+
+
+      item.appendChild(
+        img
+      );
+
+
+      item.appendChild(
+        name
+      );
+
+
+      ranking.appendChild(
+        item
+      );
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
+   開始
+===================================================== */
+
+loadActors();
+
 
 </script>
 

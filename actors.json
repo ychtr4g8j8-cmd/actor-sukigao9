@@ -78,5 +78,420 @@
     "id": "kohei_higuchi",
     "name": "樋口幸平",
     "image": "https://placehold.co/500x500?text=Kohei+Higuchi"
+  },
+  {
+    "id": "takumi_kitamura",
+    "name": "北村匠海",
+    "image": "https://placehold.co/500x500?text=Takumi+Kitamura"
+  },
+  {
+    "id": "gordon_maeda",
+    "name": "眞栄田郷敦",
+    "image": "https://placehold.co/500x500?text=Gordon+Maeda"
+  },
+  {
+    "id": "mackenyu_arata",
+    "name": "新田真剣佑",
+    "image": "https://placehold.co/500x500?text=Mackenyu"
+  },
+  {
+    "id": "fuju_kamio",
+    "name": "神尾楓珠",
+    "image": "https://placehold.co/500x500?text=Fuju+Kamio"
+  },
+  {
+    "id": "koji_mizukami",
+    "name": "水上恒司",
+    "image": "https://placehold.co/500x500?text=Koji+Mizukami"
+  },
+  {
+    "id": "oji_suzuka",
+    "name": "鈴鹿央士",
+    "image": "https://placehold.co/500x500?text=Oji+Suzuka"
+  },
+  {
+    "id": "riku_hagiwara",
+    "name": "萩原利久",
+    "image": "https://placehold.co/500x500?text=Riku+Hagiwara"
+  },
+  {
+    "id": "rihito_itagaki",
+    "name": "板垣李光人",
+    "image": "https://placehold.co/500x500?text=Rihito+Itagaki"
+  },
+  {
+    "id": "koki_yamashita",
+    "name": "山下幸輝",
+    "image": "https://placehold.co/500x500?text=Koki+Yamashita"
+  },
+  {
+    "id": "taisei_kido",
+    "name": "木戸大聖",
+    "image": "https://placehold.co/500x500?text=Taisei+Kido"
+  },
+  {
+    "id": "kanata_hosoda",
+    "name": "細田佳央太",
+    "image": "https://placehold.co/500x500?text=Kanata+Hosoda"
+  },
+  {
+    "id": "daiken_okudaira",
+    "name": "奥平大兼",
+    "image": "https://placehold.co/500x500?text=Daiken+Okudaira"
+  },
+  {
+    "id": "airu_kubozuka",
+    "name": "窪塚愛流",
+    "image": "https://placehold.co/500x500?text=Airu+Kubozuka"
+  },
+  {
+    "id": "kota_nomura",
+    "name": "野村康太",
+    "image": "https://placehold.co/500x500?text=Kota+Nomura"
+  },
+  {
+    "id": "keito_tsuna",
+    "name": "綱啓永",
+    "image": "https://placehold.co/500x500?text=Keito+Tsuna"
+  },
+  {
+    "id": "katsumi_hyodo",
+    "name": "兵頭功海",
+    "image": "https://placehold.co/500x500?text=Katsumi+Hyodo"
+  },
+  {
+    "id": "kentaro_maeda",
+    "name": "前田拳太郎",
+    "image": "https://placehold.co/500x500?text=Kentaro+Maeda"
+  },
+  {
+    "id": "sho_nishigaki",
+    "name": "西垣匠",
+    "image": "https://placehold.co/500x500?text=Sho+Nishigaki"
+  },
+  {
+    "id": "yoshi_iwase",
+    "name": "岩瀬洋志",
+    "image": "https://placehold.co/500x500?text=Yoshi+Iwase"
+  },
+  {
+    "id": "taiyu_fujiwara",
+    "name": "藤原大祐",
+    "image": "https://placehold.co/500x500?text=Daisuke+Fujiwara"
+  },
+  {
+    "id": "yuki_inoue",
+    "name": "井上祐貴",
+    "image": "https://placehold.co/500x500?text=Yuki+Inoue"
+  },
+  {
+    "id": "kiita_komagine",
+    "name": "駒木根葵汰",
+    "image": "https://placehold.co/500x500?text=Aoki+Komagine"
+  },
+  {
+    "id": "wataru_hyuga",
+    "name": "日向亘",
+    "image": "https://placehold.co/500x500?text=Wataru+Hinata"
+  },
+  {
+    "id": "jin_suzuki",
+    "name": "鈴木仁",
+    "image": "https://placehold.co/500x500?text=Jin+Suzuki"
+  },
+  {
+    "id": "sora_inoue",
+    "name": "井上想良",
+    "image": "https://placehold.co/500x500?text=Sora+Inoue"
+  },
+  {
+    "id": "towa_araki",
+    "name": "荒木飛羽",
+    "image": "https://placehold.co/500x500?text=Towa+Araki"
+  },
+  {
+    "id": "tomoya_oku",
+    "name": "奥智哉",
+    "image": "https://placehold.co/500x500?text=Tomoya+Oku"
+  },
+  {
+    "id": "nijiro_murakami",
+    "name": "村上虹郎",
+    "image": "https://placehold.co/500x500?text=Koki+Kurosaki"
+  },
+  {
+    "id": "kotaro_daigo",
+    "name": "醍醐虎汰朗",
+    "image": "https://placehold.co/500x500?text=Kotaro+Daigo"
+  },
+  {
+    "id": "akira_takano",
+    "name": "高野洸",
+    "image": "https://placehold.co/500x500?text=Kanichiro"
+  },
+  {
+    "id": "daichi_kaneko",
+    "name": "金子大地",
+    "image": "https://placehold.co/500x500?text=Daichi+Kaneko"
+  },
+  {
+    "id": "tatsuomi_hamada",
+    "name": "濱田龍臣",
+    "image": "https://placehold.co/500x500?text=Kanta+Sato"
+  },
+  {
+    "id": "maito_fujioka",
+    "name": "藤岡真威人",
+    "image": "https://placehold.co/500x500?text=Ryota+Miura"
+  },
+  {
+    "id": "ryosuke_sota",
+    "name": "曽田陵介",
+    "image": "https://placehold.co/500x500?text=Tora+Kobayashi"
+  },
+  {
+    "id": "hiroki_matsumoto",
+    "name": "松本大輝",
+    "image": "https://placehold.co/500x500?text=Taiki+Matsumoto"
+  },
+  {
+    "id": "kairi_jyo",
+    "name": "城桧吏",
+    "image": "https://placehold.co/500x500?text=Kosuke+Suzuki"
+  },
+  {
+    "id": "kazuki_horike",
+    "name": "堀家一希",
+    "image": "https://placehold.co/500x500?text=Kazuki+Horike"
+  },
+  {
+    "id": "reo_matsumoto",
+    "name": "松本怜生",
+    "image": "https://placehold.co/500x500?text=Reo+Matsumoto"
+  },
+  {
+    "id": "yudai_toyoda",
+    "name": "豊田裕大",
+    "image": "https://placehold.co/500x500?text=Yudai+Toyoda"
+  },
+  {
+    "id": "taisei_sakai",
+    "name": "酒井大成",
+    "image": "https://placehold.co/500x500?text=Taisei+Sakai"
+  },
+  {
+    "id": "noriyuki_hamao",
+    "name": "濱尾ノリタカ",
+    "image": "https://placehold.co/500x500?text=Noriyuki+Hamao"
+  },
+  {
+    "id": "jun_saito",
+    "name": "齋藤潤",
+    "image": "https://placehold.co/500x500?text=Jun+Saito"
+  },
+  {
+    "id": "junsei_motojima",
+    "name": "本島純政",
+    "image": "https://placehold.co/500x500?text=Junsei+Motojima"
+  },
+  {
+    "id": "shogo_kan",
+    "name": "簡秀吉",
+    "image": "https://placehold.co/500x500?text=Shogo+Kan"
+  },
+  {
+    "id": "shuichiro_naito",
+    "name": "内藤秀一郎",
+    "image": "https://placehold.co/500x500?text=Shuichiro+Naito"
+  },
+  {
+    "id": "motoki_nakazawa",
+    "name": "中沢元紀",
+    "image": "https://placehold.co/500x500?text=Motoki+Nakazawa"
+  },
+  {
+    "id": "yuzuru_aoki",
+    "name": "青木柚",
+    "image": "https://placehold.co/500x500?text=Yuzuru+Aoki"
+  },
+  {
+    "id": "soma_yamaji",
+    "name": "山時聡真",
+    "image": "https://placehold.co/500x500?text=Soma+Yamaji"
+  },
+  {
+    "id": "taketo_tanaka",
+    "name": "田中偉登",
+    "image": "https://placehold.co/500x500?text=Taketo+Tanaka"
+  },
+  {
+    "id": "takumi_kura",
+    "name": "倉悠貴",
+    "image": "https://placehold.co/500x500?text=Yuki+Kura"
+  },
+  {
+    "id": "seishiro_kato",
+    "name": "加藤清史郎",
+    "image": "https://placehold.co/500x500?text=Seishiro+Kato"
+  },
+  {
+    "id": "raku",
+    "name": "楽駆",
+    "image": "https://placehold.co/500x500?text=Raku"
+  },
+  {
+    "id": "hoju_sakumoto",
+    "name": "佐久本宝",
+    "image": "https://placehold.co/500x500?text=Hoju+Sakumoto"
+  },
+  {
+    "id": "ryunosuke_ito",
+    "name": "伊藤龍之介",
+    "image": "https://placehold.co/500x500?text=Ryunosuke+Ito"
+  },
+  {
+    "id": "yuto_koshiyama",
+    "name": "越山敬達",
+    "image": "https://placehold.co/500x500?text=Keitatsu+Koshiyama"
+  },
+  {
+    "id": "yuki_hayashi",
+    "name": "林裕太",
+    "image": "https://placehold.co/500x500?text=Yuta+Hayashi"
+  },
+  {
+    "id": "yukito_hidaka",
+    "name": "日高由起刀",
+    "image": "https://placehold.co/500x500?text=Yukito+Hidaka"
+  },
+  {
+    "id": "rairin_sugita",
+    "name": "杉田雷麟",
+    "image": "https://placehold.co/500x500?text=Rairin+Sugita"
+  },
+  {
+    "id": "tsubasa_nakagawa",
+    "name": "中川翼",
+    "image": "https://placehold.co/500x500?text=Tsubasa+Nakagawa"
+  },
+  {
+    "id": "riku_onishi",
+    "name": "大西利空",
+    "image": "https://placehold.co/500x500?text=Riku+Onishi"
+  },
+  {
+    "id": "taysuke_niihara",
+    "name": "新原泰佑",
+    "image": "https://placehold.co/500x500?text=Taisuke+Niihara"
+  },
+  {
+    "id": "jun_nishiyama",
+    "name": "西山潤",
+    "image": "https://placehold.co/500x500?text=Jun+Nishiyama"
+  },
+  {
+    "id": "raizo_ishikawa",
+    "name": "石川雷蔵",
+    "image": "https://placehold.co/500x500?text=Raizo+Ishikawa"
+  },
+  {
+    "id": "ryuto_honda",
+    "name": "本田琉登",
+    "image": "https://placehold.co/500x500?text=Ryuto+Honda"
+  },
+  {
+    "id": "rai_takahashi",
+    "name": "髙橋來",
+    "image": "https://placehold.co/500x500?text=Rai+Takahashi"
+  },
+  {
+    "id": "eito_konishi",
+    "name": "小西詠斗",
+    "image": "https://placehold.co/500x500?text=Eito+Konishi"
+  },
+  {
+    "id": "ryota_kobayashi",
+    "name": "小林亮太",
+    "image": "https://placehold.co/500x500?text=Ryota+Kobayashi"
+  },
+  {
+    "id": "ryu_saito",
+    "name": "齋藤璃佑",
+    "image": "https://placehold.co/500x500?text=Ryu+Saito"
+  },
+  {
+    "id": "kan_takahashi",
+    "name": "高橋侃",
+    "image": "https://placehold.co/500x500?text=Kan+Takahashi"
+  },
+  {
+    "id": "ayumu_mochizuki",
+    "name": "望月歩",
+    "image": "https://placehold.co/500x500?text=Ayumu+Mochizuki"
+  },
+  {
+    "id": "hiroaki_oka",
+    "name": "岡宏明",
+    "image": "https://placehold.co/500x500?text=Hiroaki+Oka"
+  },
+  {
+    "id": "sota_uemura",
+    "name": "植村颯太",
+    "image": "https://placehold.co/500x500?text=Sota+Uemura"
+  },
+  {
+    "id": "koki_maeda",
+    "name": "前田航基",
+    "image": "https://placehold.co/500x500?text=Koki+Maeda"
+  },
+  {
+    "id": "aimu_mizuishi",
+    "name": "水石亜飛夢",
+    "image": "https://placehold.co/500x500?text=Aimu+Mizuishi"
+  },
+  {
+    "id": "sora_ichinose",
+    "name": "一ノ瀬颯",
+    "image": "https://placehold.co/500x500?text=Sora+Ichinose"
+  },
+  {
+    "id": "yudai_nishikawa",
+    "name": "西川雄大",
+    "image": "https://placehold.co/500x500?text=Yudai+Nishikawa"
+  },
+  {
+    "id": "souma_sato",
+    "name": "佐藤想",
+    "image": "https://placehold.co/500x500?text=Souma+Sato"
+  },
+  {
+    "id": "yuto_kamimura",
+    "name": "上村侑",
+    "image": "https://placehold.co/500x500?text=Yuto+Kamimura"
+  },
+  {
+    "id": "sosuke_ikematsu",
+    "name": "池松壮亮",
+    "image": "https://placehold.co/500x500?text=Sousuke+Ikematsu"
+  },
+  {
+    "id": "shohei_unoki",
+    "name": "宇野祥平",
+    "image": "https://placehold.co/500x500?text=Shohei+Unoki"
+  },
+  {
+    "id": "daisuke_nakagawa",
+    "name": "中川大輔",
+    "image": "https://placehold.co/500x500?text=Daisuke+Nakagawa"
+  },
+  {
+    "id": "yuto_takahashi",
+    "name": "高橋侑大",
+    "image": "https://placehold.co/500x500?text=Yuto+Takahashi"
+  },
+  {
+    "id": "soma_kurokawa",
+    "name": "黒川想矢",
+    "image": "https://placehold.co/500x500?text=Soya+Kurokawa"
   }
 ]

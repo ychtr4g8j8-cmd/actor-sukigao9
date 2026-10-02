@@ -990,20 +990,11 @@
     "image": "https://placehold.co/500x500?text=Yuya+Endo"
   },
   {
-    "id": "syotaro_okada",
-    "name": "岡田翔太郎",
-    "image": "https://placehold.co/500x500?text=Tohru+Baba"
-  },
-  {
     "id": "ukon_onoe",
     "name": "尾上右近",
     "image": "https://placehold.co/500x500?text=Tomoki+Hasegawa"
   },
   {
-    "id": "gaku_oshida",
-    "name": "押田岳",
-    "image": "https://placehold.co/500x500?text=Ryo+Kimura"
-  },
   {
     "id": "somegoro_ichikawa",
     "name": "市川染五郎",
@@ -1155,10 +1146,4 @@
     "name": "笠松将",
     "image": "https://placehold.co/500x500?text=Tomoya+Maeno"
   },
-  {
-    "id": "keisuke_higashi",
-    "name": "東啓介",
-    "image": "https://placehold.co/500x500?text=Shunya+Ito"
-  }
-]
 ]

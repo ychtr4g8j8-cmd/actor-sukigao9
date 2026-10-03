@@ -450,11 +450,6 @@
     "image": "https://placehold.co/500x500?text=Aimu+Mizuishi"
   },
   {
-    "id": "sora_inoue",
-    "name": "井上想良",
-    "image": "https://placehold.co/500x500?text=Sora+Ichinose"
-  },
-  {
     "id": "yuki_kubota",
     "name": "久保田悠来",
     "image": "https://placehold.co/500x500?text=Yudai+Nishikawa"
@@ -493,8 +488,8 @@
     "id": "soya_kurokawa",
     "name": "黒川想矢",
     "image": "https://placehold.co/500x500?text=Soya+Kurokawa"
-  }
-    {
+  },
+  {
     "id": "taiga_nakano",
     "name": "仲野太賀",
     "image": "https://placehold.co/500x500?text=Taiga+Nakano"
@@ -883,7 +878,7 @@
     "id": "yuta_koseki",
     "name": "小関裕太",
     "image": "https://placehold.co/500x500?text=Yuta+Koseki"
-  }
+  },
   {
     "id": "yu_shirota",
     "name": "城田優",
@@ -945,11 +940,6 @@
     "image": "https://placehold.co/500x500?text=Akihiro+Nakagawa"
   },
   {
-    "id": "hiroshi_abe",
-    "name": "阿部寛",
-    "image": "https://placehold.co/500x500?text=Kazuaki+Ishii"
-  },
-  {
     "id": "kohei_matsushita",
     "name": "松下洸平",
     "image": "https://placehold.co/500x500?text=Kohei+Matsushita"
@@ -995,12 +985,10 @@
     "image": "https://placehold.co/500x500?text=Tomoki+Hasegawa"
   },
   {
-  {
     "id": "somegoro_ichikawa",
     "name": "市川染五郎",
     "image": "https://placehold.co/500x500?text=Satoru+Kawaguchi"
-  }
-[
+  },
   {
     "id": "asuaka_kudo",
     "name": "工藤阿須加",
@@ -1087,11 +1075,6 @@
     "image": "https://placehold.co/500x500?text=Kaito+Takahashi"
   },
   {
-    "id": "daiki_shigeoka",
-    "name": "重岡大毅",
-    "image": "https://placehold.co/500x500?text=Daiki+Shigeoka"
-  },
-  {
     "id": "yuki_furukawa",
     "name": "古川毅",
     "image": "https://placehold.co/500x500?text=Tsuyoshi+Furukawa"
@@ -1102,29 +1085,9 @@
     "image": "https://placehold.co/500x500?text=Ryo+Seguchi"
   },
   {
-    "id": "shogo_hama",
-    "name": "濱尾ノリタカ",
-    "image": "https://placehold.co/500x500?text=Noriyuki+Hamao"
-  },
-  {
-    "id": "ryubi_miyase",
-    "name": "宮世琉弥",
-    "image": "https://placehold.co/500x500?text=Ryubi+Miyase"
-  },
-  {
-    "id": "koki_yamashita",
-    "name": "山下幸輝",
-    "image": "https://placehold.co/500x500?text=Koki+Yamashita"
-  },
-  {
     "id": "taisei_sakai",
     "name": "酒井大成",
     "image": "https://placehold.co/500x500?text=Taisei+Sakai"
-  },
-  {
-    "id": "kohei_takeda",
-    "name": "武田航平",
-    "image": "https://placehold.co/500x500?text=Shunsuke+Michieda"
   },
   {
     "id": "ryota_miura",
@@ -1145,5 +1108,5 @@
     "id": "syo_kasamatsu",
     "name": "笠松将",
     "image": "https://placehold.co/500x500?text=Tomoya+Maeno"
-  },
+  }
 ]
